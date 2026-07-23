@@ -1,0 +1,25 @@
+{
+  "nav": {
+    "about": "الدار",
+    "products": "المجموعات",
+    "manufacturing": "الحرفية",
+    "sustainability": "الاستدامة",
+    "projects": "المشاريع",
+    "news": "المجلة",
+    "contact": "اتصل بنا",
+    "skipToContent": "الانتقال إلى المحتوى",
+    "languageSwitcher": "تغيير اللغة"
+  },
+  "hero": {
+    "eyebrow": "دار HURASI",
+    "title": "التميز بطبعه",
+    "subtitle": "صُنع بأناة، ليدوم أجيالاً.",
+    "cta": "اكتشف الدار"
+  },
+  "footer": {
+    "newsletterTitle": "ابقَ على اطلاع",
+    "newsletterPlaceholder": "بريدك الإلكتروني",
+    "newsletterSubmit": "اشترك",
+    "rights": "جميع الحقوق محفوظة."
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "nav": {
+    "about": "关于我们",
+    "products": "系列产品",
+    "manufacturing": "工艺",
+    "sustainability": "可持续发展",
+    "projects": "项目案例",
+    "news": "资讯",
+    "contact": "联系我们",
+    "skipToContent": "跳至内容",
+    "languageSwitcher": "切换语言"
+  },
+  "hero": {
+    "eyebrow": "HURASI 之家",
+    "title": "卓越,源于本质",
+    "subtitle": "以耐心雕琢,历经世代传承。",
+    "cta": "探索品牌之家"
+  },
+  "footer": {
+    "newsletterTitle": "保持联系",
+    "newsletterPlaceholder": "您的电子邮箱",
+    "newsletterSubmit": "订阅",
+    "rights": "版权所有。"
+  }
+}

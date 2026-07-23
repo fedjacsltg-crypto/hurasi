@@ -1,0 +1,25 @@
+{
+  "nav": {
+    "about": "The House",
+    "products": "Collections",
+    "manufacturing": "Craftsmanship",
+    "sustainability": "Sustainability",
+    "projects": "Projects",
+    "news": "Journal",
+    "contact": "Contact",
+    "skipToContent": "Skip to content",
+    "languageSwitcher": "Change language"
+  },
+  "hero": {
+    "eyebrow": "House of HURASI",
+    "title": "Excellence, by nature",
+    "subtitle": "Crafted with patience, built to last generations.",
+    "cta": "Discover the House"
+  },
+  "footer": {
+    "newsletterTitle": "Stay informed",
+    "newsletterPlaceholder": "Your email address",
+    "newsletterSubmit": "Subscribe",
+    "rights": "All rights reserved."
+  }
+}

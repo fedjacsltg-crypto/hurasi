@@ -1,0 +1,25 @@
+{
+  "nav": {
+    "about": "О Доме",
+    "products": "Коллекции",
+    "manufacturing": "Мастерство",
+    "sustainability": "Устойчивое развитие",
+    "projects": "Проекты",
+    "news": "Журнал",
+    "contact": "Контакты",
+    "skipToContent": "Перейти к содержанию",
+    "languageSwitcher": "Сменить язык"
+  },
+  "hero": {
+    "eyebrow": "Дом HURASI",
+    "title": "Совершенство по своей природе",
+    "subtitle": "Создано с терпением, чтобы служить поколениям.",
+    "cta": "Узнать о Доме"
+  },
+  "footer": {
+    "newsletterTitle": "Будьте в курсе",
+    "newsletterPlaceholder": "Ваш email",
+    "newsletterSubmit": "Подписаться",
+    "rights": "Все права защищены."
+  }
+}

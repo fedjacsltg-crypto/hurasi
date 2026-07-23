@@ -1,0 +1,25 @@
+{
+  "nav": {
+    "about": "A Casa",
+    "products": "Coleções",
+    "manufacturing": "Saber-fazer",
+    "sustainability": "Sustentabilidade",
+    "projects": "Projetos",
+    "news": "Jornal",
+    "contact": "Contacto",
+    "skipToContent": "Ir para o conteúdo",
+    "languageSwitcher": "Mudar de idioma"
+  },
+  "hero": {
+    "eyebrow": "Casa HURASI",
+    "title": "A excelência, por natureza",
+    "subtitle": "Feito com paciência, concebido para atravessar gerações.",
+    "cta": "Descobrir a Casa"
+  },
+  "footer": {
+    "newsletterTitle": "Mantenha-se informado",
+    "newsletterPlaceholder": "O seu endereço de email",
+    "newsletterSubmit": "Subscrever",
+    "rights": "Todos os direitos reservados."
+  }
+}
