@@ -51,7 +51,7 @@ export async function generateMetadata({
 
   return {
     title: {
-      default: `HURASI — ${t("title")}`,
+      default: `HURASI — ${t("tagline")}`,
       template: "%s — HURASI",
     },
     description: t("subtitle"),
@@ -81,7 +81,7 @@ export default async function LocaleLayout({
       : `${fraunces.variable} ${inter.variable}`;
 
   return (
-    <html lang={locale} dir={dir} className={`${fontVars} h-full antialiased`}>
+    <html lang={locale} dir={dir} className={`${fontVars} dark h-full antialiased`}>
       <body className="min-h-full">
         <NextIntlClientProvider>
           {/* Skip link — toujours en premier élément focusable (Phase 8 §2) */}

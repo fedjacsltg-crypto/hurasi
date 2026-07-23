@@ -1,22 +1,39 @@
 {
   "nav": {
     "about": "La Maison",
-    "products": "Collections",
+    "forests": "Nos Forêts",
+    "products": "Nos Produits",
     "manufacturing": "Savoir-faire",
     "sustainability": "Durabilité",
+    "gallery": "Galerie",
     "projects": "Réalisations",
     "news": "Le Journal",
     "contact": "Contact",
+    "getInTouch": "Nous contacter",
     "skipToContent": "Aller au contenu",
     "languageSwitcher": "Changer de langue"
   },
   "hero": {
-    "eyebrow": "Maison HURASI",
-    "title": "L'excellence, par nature",
-    "subtitle": "Façonné avec patience, conçu pour traverser les générations.",
-    "cta": "Découvrir la Maison"
+    "tagline": "Bois Noble. Valeur Intemporelle.",
+    "subtitle": "Acajou premium certifié FSC, de notre forêt jusqu'à votre atelier.",
+    "cta": "Découvrir nos essences"
+  },
+  "ourForests": {
+    "eyebrow": "Nos Forêts",
+    "title": "Des forêts d'acajou gérées durablement",
+    "description": "Nous exploitons notre propre plantation et notre scierie sous certification FSC, de l'arbre sur pied jusqu'à la planche finie — traçabilité complète, sans intermédiaire.",
+    "cta": "En savoir plus"
+  },
+  "stats": {
+    "experience": "Années d'expérience",
+    "exported": "m³ exportés",
+    "countries": "Pays desservis",
+    "shipping": "Certifié FSC"
   },
   "footer": {
+    "tagline": "Bois Noble. Valeur Intemporelle.",
+    "quickLinks": "Liens rapides",
+    "contactInfo": "Contact",
     "newsletterTitle": "Restez informé",
     "newsletterPlaceholder": "Votre adresse email",
     "newsletterSubmit": "S'inscrire",

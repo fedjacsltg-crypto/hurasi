@@ -1,7 +1,9 @@
 import { setRequestLocale } from "next-intl/server";
 import { Hero } from "@/components/sections/Hero";
-import { CompanySection } from "@/components/sections/CompanySection";
+import { OurForestsSection } from "@/components/sections/OurForestsSection";
 import { ProductsSection } from "@/components/sections/ProductsSection";
+import { StatsBar } from "@/components/sections/StatsBar";
+import { CompanySection } from "@/components/sections/CompanySection";
 
 export default async function HomePage({
   params,
@@ -14,8 +16,10 @@ export default async function HomePage({
   return (
     <>
       <Hero />
-      <CompanySection />
+      <OurForestsSection />
       <ProductsSection />
+      <StatsBar />
+      <CompanySection />
     </>
   );
 }

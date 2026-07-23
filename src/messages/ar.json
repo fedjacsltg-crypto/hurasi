@@ -1,22 +1,39 @@
 {
   "nav": {
     "about": "الدار",
-    "products": "المجموعات",
+    "forests": "غاباتنا",
+    "products": "منتجاتنا",
     "manufacturing": "الحرفية",
     "sustainability": "الاستدامة",
+    "gallery": "المعرض",
     "projects": "المشاريع",
     "news": "المجلة",
     "contact": "اتصل بنا",
+    "getInTouch": "تواصل معنا",
     "skipToContent": "الانتقال إلى المحتوى",
     "languageSwitcher": "تغيير اللغة"
   },
   "hero": {
-    "eyebrow": "دار HURASI",
-    "title": "التميز بطبعه",
-    "subtitle": "صُنع بأناة، ليدوم أجيالاً.",
-    "cta": "اكتشف الدار"
+    "tagline": "خشب نبيل. قيمة خالدة.",
+    "subtitle": "خشب الماهوجني الفاخر المعتمد من FSC، من غاباتنا إلى ورشتك.",
+    "cta": "اكتشف أخشابنا"
+  },
+  "ourForests": {
+    "eyebrow": "غاباتنا",
+    "title": "غابات ماهوجني تُدار باستدامة",
+    "description": "ندير مزرعتنا ومنشرتنا الخاصة بشهادة FSC، من الشجرة القائمة إلى اللوح النهائي — تتبع كامل، دون وسطاء.",
+    "cta": "اعرف المزيد"
+  },
+  "stats": {
+    "experience": "سنوات من الخبرة",
+    "exported": "م³ مُصدّرة",
+    "countries": "دولة نخدمها",
+    "shipping": "معتمد FSC"
   },
   "footer": {
+    "tagline": "خشب نبيل. قيمة خالدة.",
+    "quickLinks": "روابط سريعة",
+    "contactInfo": "اتصل بنا",
     "newsletterTitle": "ابقَ على اطلاع",
     "newsletterPlaceholder": "بريدك الإلكتروني",
     "newsletterSubmit": "اشترك",

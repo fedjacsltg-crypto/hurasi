@@ -1,32 +1,72 @@
-import { useTranslations } from "next-intl";
+import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 import { Link } from "@/lib/i18n/navigation";
 import { Newsletter } from "@/components/sections/Newsletter";
 
 /**
- * Toujours en registre sombre, quel que soit le mode de la page courante
- * (Phase 2 §15) — décision de marque, pas une continuité de thème.
+ * Footer — toujours en registre sombre (Phase 2 §15). Mis à jour avec
+ * le vrai logo, une ligne de contact, et des icônes sociales monochromes
+ * (Phase 6 page 1 §7 : jamais les couleurs officielles bariolées).
+ *
+ * TODO(contenu réel) : remplacer l'email/téléphone/adresse placeholder
+ * et les liens sociaux par les vraies coordonnées HURASI.
  */
-export function Footer() {
-  const t = useTranslations("nav");
-  const tFooter = useTranslations("footer");
+export async function Footer() {
+  const t = await getTranslations("nav");
+  const tFooter = await getTranslations("footer");
   const year = new Date().getFullYear();
 
   return (
     <footer className="relative overflow-hidden bg-obsidian text-pearl">
       <div className="mx-auto grid max-w-[1440px] gap-11 px-6 py-14 sm:px-11 sm:py-20 md:grid-cols-4">
         <div className="md:col-span-1">
-          <p className="font-display text-heading-m">HURASI</p>
+          <Image
+            src="/brand/logo-hurasi.png"
+            alt="HURASI"
+            width={140}
+            height={140}
+            className="h-auto w-24"
+          />
+          <p className="mt-4 text-body-s text-pearl/60">
+            {tFooter("tagline")}
+          </p>
+          <div className="mt-6 flex gap-4">
+            {/* Icônes sociales — placeholders, à relier aux vrais comptes */}
+            {["LinkedIn", "Instagram", "WhatsApp"].map((label) => (
+              <span
+                key={label}
+                aria-label={label}
+                className="flex h-8 w-8 items-center justify-center border border-pearl/20 text-[0.65rem] uppercase text-pearl/60"
+              >
+                {label[0]}
+              </span>
+            ))}
+          </div>
         </div>
 
-        <nav aria-label="Plan du site" className="grid gap-3 text-body-s text-pearl/70 md:col-span-2 md:grid-cols-2">
-          <Link href="/about" className="hover:text-pearl transition-colors">{t("about")}</Link>
-          <Link href="/products" className="hover:text-pearl transition-colors">{t("products")}</Link>
-          <Link href="/manufacturing" className="hover:text-pearl transition-colors">{t("manufacturing")}</Link>
-          <Link href="/sustainability" className="hover:text-pearl transition-colors">{t("sustainability")}</Link>
-          <Link href="/projects" className="hover:text-pearl transition-colors">{t("projects")}</Link>
-          <Link href="/news" className="hover:text-pearl transition-colors">{t("news")}</Link>
-          <Link href="/contact" className="hover:text-pearl transition-colors">{t("contact")}</Link>
+        <nav aria-label="Plan du site" className="text-body-s text-pearl/70">
+          <p className="mb-4 text-caption uppercase tracking-[0.1em] text-pearl/40">
+            {tFooter("quickLinks")}
+          </p>
+          <ul className="space-y-3">
+            <li><Link href="/about" className="hover:text-pearl transition-colors">{t("about")}</Link></li>
+            <li><Link href="/forests" className="hover:text-pearl transition-colors">{t("forests")}</Link></li>
+            <li><Link href="/products" className="hover:text-pearl transition-colors">{t("products")}</Link></li>
+            <li><Link href="/sustainability" className="hover:text-pearl transition-colors">{t("sustainability")}</Link></li>
+            <li><Link href="/gallery" className="hover:text-pearl transition-colors">{t("gallery")}</Link></li>
+          </ul>
         </nav>
+
+        <div className="text-body-s text-pearl/70">
+          <p className="mb-4 text-caption uppercase tracking-[0.1em] text-pearl/40">
+            {tFooter("contactInfo")}
+          </p>
+          <ul className="space-y-3">
+            <li>contact@hurasi.com</li>
+            <li>+00 00 00 00 00</li>
+            <li>Adresse à préciser</li>
+          </ul>
+        </div>
 
         <div className="md:col-span-1">
           <Newsletter />
@@ -36,14 +76,6 @@ export function Footer() {
       <div className="border-t border-pearl/10 px-6 py-6 text-caption text-pearl/50 sm:px-11">
         © {year} HURASI. {tFooter("rights")}
       </div>
-
-      {/* Monogramme en filigrane — signature de clôture (Phase 3 §9) */}
-      <p
-        aria-hidden
-        className="pointer-events-none select-none text-center font-display text-[18vw] leading-none text-pearl/[0.03] -mb-[6vw]"
-      >
-        HURASI
-      </p>
     </footer>
   );
 }

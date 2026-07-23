@@ -1,22 +1,39 @@
 {
   "nav": {
-    "about": "The House",
-    "products": "Collections",
+    "about": "About Us",
+    "forests": "Our Forests",
+    "products": "Our Products",
     "manufacturing": "Craftsmanship",
     "sustainability": "Sustainability",
+    "gallery": "Gallery",
     "projects": "Projects",
     "news": "Journal",
-    "contact": "Contact",
+    "contact": "Contact Us",
+    "getInTouch": "Get in Touch",
     "skipToContent": "Skip to content",
     "languageSwitcher": "Change language"
   },
   "hero": {
-    "eyebrow": "House of HURASI",
-    "title": "Excellence, by nature",
-    "subtitle": "Crafted with patience, built to last for ever.",
-    "cta": "Discover the House"
+    "tagline": "Noble Wood. Timeless Value.",
+    "subtitle": "Premium FSC-certified mahogany, from our own forest to your workshop.",
+    "cta": "Explore Our Timber"
+  },
+  "ourForests": {
+    "eyebrow": "Our Forests",
+    "title": "Sustainable mahogany forests, responsibly harvested",
+    "description": "We manage our own plantation and sawmill under FSC certification, from standing tree to finished board — full traceability, no intermediaries.",
+    "cta": "Discover more"
+  },
+  "stats": {
+    "experience": "Years of experience",
+    "exported": "m³ exported",
+    "countries": "Countries served",
+    "shipping": "FSC certified"
   },
   "footer": {
+    "tagline": "Noble Wood. Timeless Value.",
+    "quickLinks": "Quick Links",
+    "contactInfo": "Contact",
     "newsletterTitle": "Stay informed",
     "newsletterPlaceholder": "Your email address",
     "newsletterSubmit": "Subscribe",

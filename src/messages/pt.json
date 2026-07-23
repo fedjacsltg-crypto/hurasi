@@ -1,22 +1,39 @@
 {
   "nav": {
     "about": "A Casa",
-    "products": "Coleções",
+    "forests": "Nossas Florestas",
+    "products": "Nossos Produtos",
     "manufacturing": "Saber-fazer",
     "sustainability": "Sustentabilidade",
+    "gallery": "Galeria",
     "projects": "Projetos",
     "news": "Jornal",
     "contact": "Contacto",
+    "getInTouch": "Fale connosco",
     "skipToContent": "Ir para o conteúdo",
     "languageSwitcher": "Mudar de idioma"
   },
   "hero": {
-    "eyebrow": "Casa HURASI",
-    "title": "A excelência, por natureza",
-    "subtitle": "Feito com paciência, concebido para atravessar gerações.",
-    "cta": "Descobrir a Casa"
+    "tagline": "Madeira Nobre. Valor Intemporal.",
+    "subtitle": "Mogno premium certificado FSC, da nossa floresta até à sua oficina.",
+    "cta": "Explorar a nossa madeira"
+  },
+  "ourForests": {
+    "eyebrow": "Nossas Florestas",
+    "title": "Florestas de mogno geridas de forma sustentável",
+    "description": "Gerimos a nossa própria plantação e serração sob certificação FSC, da árvore em pé até à tábua acabada — rastreabilidade total, sem intermediários.",
+    "cta": "Saber mais"
+  },
+  "stats": {
+    "experience": "Anos de experiência",
+    "exported": "m³ exportados",
+    "countries": "Países servidos",
+    "shipping": "Certificado FSC"
   },
   "footer": {
+    "tagline": "Madeira Nobre. Valor Intemporal.",
+    "quickLinks": "Links rápidos",
+    "contactInfo": "Contacto",
     "newsletterTitle": "Mantenha-se informado",
     "newsletterPlaceholder": "O seu endereço de email",
     "newsletterSubmit": "Subscrever",

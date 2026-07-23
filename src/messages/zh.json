@@ -1,22 +1,39 @@
 {
   "nav": {
     "about": "关于我们",
-    "products": "系列产品",
+    "forests": "我们的森林",
+    "products": "我们的产品",
     "manufacturing": "工艺",
     "sustainability": "可持续发展",
+    "gallery": "画廊",
     "projects": "项目案例",
     "news": "资讯",
     "contact": "联系我们",
+    "getInTouch": "联系我们",
     "skipToContent": "跳至内容",
     "languageSwitcher": "切换语言"
   },
   "hero": {
-    "eyebrow": "HURASI 之家",
-    "title": "卓越,源于本质",
-    "subtitle": "以耐心雕琢,历经世代传承。",
-    "cta": "探索品牌之家"
+    "tagline": "尊贵之木,恒久价值。",
+    "subtitle": "FSC认证优质桃花心木,从我们的森林直达您的工坊。",
+    "cta": "探索我们的木材"
+  },
+  "ourForests": {
+    "eyebrow": "我们的森林",
+    "title": "可持续经营的桃花心木森林",
+    "description": "我们经营自有的种植园与锯木厂,并通过FSC认证——从原木到成材,全程可追溯,无中间环节。",
+    "cta": "了解更多"
+  },
+  "stats": {
+    "experience": "年经验",
+    "exported": "立方米出口量",
+    "countries": "服务国家",
+    "shipping": "FSC认证"
   },
   "footer": {
+    "tagline": "尊贵之木,恒久价值。",
+    "quickLinks": "快速链接",
+    "contactInfo": "联系方式",
     "newsletterTitle": "保持联系",
     "newsletterPlaceholder": "您的电子邮箱",
     "newsletterSubmit": "订阅",
