@@ -29,10 +29,10 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-[background-color,padding,backdrop-filter] duration-300",
+        "fixed inset-x-0 top-0 z-50 transition-[background-color,padding,backdrop-filter,color] duration-300",
         scrolled
-          ? "bg-bg/70 py-3 backdrop-blur-md border-b border-border/50"
-          : "bg-transparent py-6"
+          ? "bg-bg/70 py-3 text-fg backdrop-blur-md border-b border-border/50"
+          : "bg-transparent py-6 text-pearl"
       )}
     >
       <nav
@@ -48,7 +48,7 @@ export function Navbar() {
             <li key={item.key}>
               <Link
                 href={item.href}
-                className="text-caption uppercase tracking-[0.1em] text-fg/80 hover:text-fg transition-colors"
+                className="text-caption uppercase tracking-[0.1em] opacity-80 hover:opacity-100 transition-opacity"
               >
                 {t(item.key)}
               </Link>
