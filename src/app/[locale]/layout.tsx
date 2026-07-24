@@ -8,6 +8,7 @@ import { isRtl, locales, type Locale } from "@/lib/i18n/config";
 import { LenisProvider } from "@/lib/animation/LenisProvider";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { CookieConsent } from "@/components/layout/CookieConsent";
 import "../globals.css";
 
 /**
@@ -96,6 +97,7 @@ export default async function LocaleLayout({
             <Navbar />
             <main id="main-content">{children}</main>
             <Footer />
+            <CookieConsent />
           </LenisProvider>
         </NextIntlClientProvider>
       </body>
