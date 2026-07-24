@@ -3,8 +3,6 @@ import { z } from "zod";
 import { getCloudflareContext } from "@opennextjs/cloudflare";
 import { generateReferenceNumber } from "@/lib/quote/reference";
 
-export const runtime = "edge";
-
 const RECIPIENT_EMAIL = "f.huric@thmconsulting.com.br";
 const SENDER_EMAIL = "HURASI Website <onboarding@resend.dev>";
 

@@ -6,8 +6,6 @@ import { generateQuotePdf } from "@/lib/quote/generate-pdf";
 import { estimateContainer } from "@/lib/quote/container-calculator";
 import type { QuoteFormData } from "@/types/quote";
 
-export const runtime = "edge";
-
 const RECIPIENT_EMAIL = "f.huric@thmconsulting.com.br";
 // Expéditeur par défaut de Resend — fonctionne sans vérification de
 // domaine, mais ne peut alors envoyer QUE vers l'adresse du compte
