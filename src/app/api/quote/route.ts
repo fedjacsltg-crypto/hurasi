@@ -1,11 +1,19 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
+import { getCloudflareContext } from "@opennextjs/cloudflare";
 import { generateReferenceNumber } from "@/lib/quote/reference";
 import { generateQuotePdf } from "@/lib/quote/generate-pdf";
 import { estimateContainer } from "@/lib/quote/container-calculator";
 import type { QuoteFormData } from "@/types/quote";
 
 export const runtime = "edge";
+
+const RECIPIENT_EMAIL = "f.huric@thmconsulting.com.br";
+// Expéditeur par défaut de Resend — fonctionne sans vérification de
+// domaine, mais ne peut alors envoyer QUE vers l'adresse du compte
+// Resend (voir note à l'utilisateur). Remplacer par une adresse
+// @hurasi.com une fois le domaine vérifié dans Resend.
+const SENDER_EMAIL = "HURASI Website <onboarding@resend.dev>";
 
 const dimensionSchema = z.object({
   id: z.string(),
@@ -39,22 +47,15 @@ const quoteSchema = z.object({
   privacyAccepted: z.boolean(),
 });
 
-/**
- * TODO(email) : ce endpoint valide, génère un numéro de référence et
- * un PDF récapitulatif — mais n'envoie PAS encore d'email. Pour
- * activer l'envoi réel (au client + en interne), il faut :
- * 1. Créer un compte sur https://resend.com (gratuit jusqu'à 3000 emails/mois)
- * 2. Générer une clé API
- * 3. L'ajouter comme secret Cloudflare : `npx wrangler secret put RESEND_API_KEY`
- * 4. Décommenter et adapter le bloc d'envoi ci-dessous
- *
- * TODO(spam) : ajouter la vérification reCAPTCHA v3 ici une fois la
- * clé de site obtenue sur https://www.google.com/recaptcha/admin
- *
- * TODO(stockage) : chaque soumission devrait être archivée (Cloudflare
- * D1 ou KV) pour alimenter un futur CRM — non implémenté dans cette
- * phase, voir discussion sur le tableau de bord admin.
- */
+function bytesToBase64(bytes: Uint8Array): string {
+  let binary = "";
+  const chunkSize = 0x8000;
+  for (let i = 0; i < bytes.length; i += chunkSize) {
+    binary += String.fromCharCode(...bytes.subarray(i, i + chunkSize));
+  }
+  return btoa(binary);
+}
+
 export async function POST(request: Request) {
   try {
     const body = await request.json();
@@ -76,32 +77,61 @@ export async function POST(request: Request) {
     const referenceNumber = generateReferenceNumber();
     const submittedAt = new Date();
     const estimate = estimateContainer(data.dimensions);
-
-    // Génère le PDF (fonctionne dès maintenant, sans dépendance externe)
     const pdfBytes = await generateQuotePdf(data, referenceNumber, submittedAt, estimate);
+    const pdfBase64 = bytesToBase64(pdfBytes);
 
-    // --- Envoi email — désactivé tant que RESEND_API_KEY n'est pas configuré ---
-    // const resendKey = process.env.RESEND_API_KEY;
-    // if (resendKey) {
-    //   await fetch("https://api.resend.com/emails", {
-    //     method: "POST",
-    //     headers: {
-    //       Authorization: `Bearer ${resendKey}`,
-    //       "Content-Type": "application/json",
-    //     },
-    //     body: JSON.stringify({
-    //       from: "HURASI Quotes <quotes@hurasi.com>",
-    //       to: ["f.huric@thmconsulting.com.br"],
-    //       subject: `New Quotation Request — ${referenceNumber}`,
-    //       html: `<p>New quotation request from ${data.company}.</p>`,
-    //       attachments: [
-    //         { filename: `${referenceNumber}.pdf`, content: Buffer.from(pdfBytes).toString("base64") },
-    //       ],
-    //     }),
-    //   });
-    // }
+    const { env } = getCloudflareContext();
+    const resendKey = (env as { RESEND_API_KEY?: string }).RESEND_API_KEY;
 
-    void pdfBytes; // évite l'avertissement "variable inutilisée" tant que l'envoi est désactivé
+    if (resendKey) {
+      const dimensionsHtml = data.dimensions
+        .filter((d) => d.thickness && d.width && d.length && d.quantity)
+        .map((d) => `<li>${d.thickness} × ${d.width} × ${d.length} mm — Qty: ${d.quantity}</li>`)
+        .join("");
+
+      const html = `
+        <h2>New Quotation Request — ${referenceNumber}</h2>
+        <p><strong>Company:</strong> ${data.company}<br/>
+        <strong>Contact:</strong> ${data.contactPerson}<br/>
+        <strong>Country:</strong> ${data.country}<br/>
+        <strong>Email:</strong> ${data.email}<br/>
+        <strong>Phone:</strong> ${data.phone || "—"}</p>
+        <p><strong>Product Type:</strong> ${data.productType}<br/>
+        <strong>Grade:</strong> ${data.grade || "—"}<br/>
+        <strong>Moisture Content:</strong> ${data.moistureContent || "—"}<br/>
+        <strong>Surface Finish:</strong> ${data.surfaceFinish || "—"}</p>
+        <p><strong>Dimensions:</strong></p>
+        <ul>${dimensionsHtml}</ul>
+        ${
+          estimate
+            ? `<p><strong>Container Estimate:</strong> ${estimate.totalVolumeM3} m³, ${estimate.estimatedWeightKg} kg, best fit: ${estimate.bestFit?.type ?? "—"}</p>`
+            : ""
+        }
+        <p><strong>Destination:</strong> ${data.destinationCountry || "—"} — Port: ${data.finalPort || "—"} — Incoterm: ${data.incoterm || "—"}</p>
+        <p><strong>Comments:</strong><br/>${data.comments || "—"}</p>
+      `;
+
+      await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${resendKey}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          from: SENDER_EMAIL,
+          to: [RECIPIENT_EMAIL],
+          reply_to: data.email,
+          subject: `New Quotation Request — ${referenceNumber} — ${data.company}`,
+          html,
+          attachments: [
+            {
+              filename: `HURASI-Quote-${referenceNumber}.pdf`,
+              content: pdfBase64,
+            },
+          ],
+        }),
+      });
+    }
 
     return NextResponse.json({ referenceNumber, estimate });
   } catch {

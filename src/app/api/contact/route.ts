@@ -1,8 +1,12 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
+import { getCloudflareContext } from "@opennextjs/cloudflare";
 import { generateReferenceNumber } from "@/lib/quote/reference";
 
 export const runtime = "edge";
+
+const RECIPIENT_EMAIL = "f.huric@thmconsulting.com.br";
+const SENDER_EMAIL = "HURASI Website <onboarding@resend.dev>";
 
 const contactSchema = z.object({
   fullName: z.string().min(1),
@@ -19,11 +23,6 @@ const contactSchema = z.object({
   privacyAccepted: z.union([z.literal("on"), z.literal(true)]),
 });
 
-/**
- * TODO(email) : voir la note détaillée dans /api/quote/route.ts —
- * même principe ici (Resend + secret Cloudflare) pour activer
- * l'envoi réel du message au destinataire interne.
- */
 export async function POST(request: Request) {
   try {
     const body = await request.json();
@@ -36,11 +35,43 @@ export async function POST(request: Request) {
       );
     }
 
+    const data = parsed.data;
     const referenceNumber = generateReferenceNumber();
 
-    // --- Envoi email — désactivé tant que RESEND_API_KEY n'est pas configuré ---
-    // const resendKey = process.env.RESEND_API_KEY;
-    // if (resendKey) { ... }
+    const { env } = getCloudflareContext();
+    const resendKey = (env as { RESEND_API_KEY?: string }).RESEND_API_KEY;
+
+    if (resendKey) {
+      const html = `
+        <h2>New Contact Message — ${referenceNumber}</h2>
+        <p><strong>Name:</strong> ${data.fullName}<br/>
+        <strong>Company:</strong> ${data.company}<br/>
+        <strong>Position:</strong> ${data.position || "—"}<br/>
+        <strong>Country:</strong> ${data.country}<br/>
+        <strong>City:</strong> ${data.city || "—"}<br/>
+        <strong>Phone:</strong> ${data.phone || "—"}<br/>
+        <strong>Email:</strong> ${data.email}<br/>
+        <strong>Preferred Language:</strong> ${data.preferredLanguage || "—"}<br/>
+        <strong>Industry:</strong> ${data.industry || "—"}</p>
+        <p><strong>Subject:</strong> ${data.subject}</p>
+        <p><strong>Message:</strong><br/>${data.message.replace(/\n/g, "<br/>")}</p>
+      `;
+
+      await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${resendKey}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          from: SENDER_EMAIL,
+          to: [RECIPIENT_EMAIL],
+          reply_to: data.email,
+          subject: `New Contact Message — ${data.subject} — ${data.fullName}`,
+          html,
+        }),
+      });
+    }
 
     return NextResponse.json({ referenceNumber });
   } catch {
