@@ -62,3 +62,4 @@ Pages.
 3. Brancher un CMS (adaptateur `lib/cms/`)
 4. Configurer le déploiement Cloudflare Pages
 # test
+# redeploy test 2
