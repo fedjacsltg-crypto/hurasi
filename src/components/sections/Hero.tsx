@@ -27,7 +27,7 @@ export function Hero() {
         muted
         loop
         playsInline
-        poster="/videos/forest-aerial-poster.jpg"
+        poster="/images/forests/plantation-aerial.jpg"
         className="absolute inset-0 h-full w-full object-cover opacity-70"
       >
         <source src="/videos/forest-aerial.mp4" type="video/mp4" />
