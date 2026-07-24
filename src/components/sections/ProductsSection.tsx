@@ -1,11 +1,9 @@
-﻿import { getTranslations } from "next-intl/server";
-import { featuredProducts } from "@/lib/data/products";
+import { featuredProducts, parquetCapabilityStatement } from "@/lib/data/products";
 import { ProductCard } from "./ProductCard";
 import { RevealOnScroll } from "@/components/motion/RevealOnScroll";
 import { Link } from "@/lib/i18n/navigation";
 
 export async function ProductsSection() {
-  const t = await getTranslations("nav");
   const [heroProduct, ...restProducts] = featuredProducts;
 
   return (
@@ -13,22 +11,20 @@ export async function ProductsSection() {
       <RevealOnScroll className="mb-11 flex items-end justify-between gap-6 md:mb-14">
         <div>
           <p className="text-caption uppercase tracking-[0.12em] text-accent">
-            Bois certifié FSC
+            {parquetCapabilityStatement.eyebrow}
           </p>
           <h2 className="mt-4 font-display text-heading-l md:text-display-m">
-            Nos gammes
+            {parquetCapabilityStatement.title}
           </h2>
-          <p className="mt-4 max-w-[46ch] text-body-m text-fg/60">
-            Planches sciées et parquet massif en acajou, issus de notre
-            plantation et de notre scierie — la matière première de vos
-            réalisations.
+          <p className="mt-4 max-w-[52ch] text-body-m text-fg/60">
+            {parquetCapabilityStatement.description}
           </p>
         </div>
         <Link
           href="/products"
           className="hidden shrink-0 border-b border-fg/20 pb-1 text-body-m hover:border-fg transition-colors sm:block"
         >
-          {t("products")}
+          View All Products
         </Link>
       </RevealOnScroll>
 

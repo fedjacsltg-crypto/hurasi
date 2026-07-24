@@ -1,72 +1,97 @@
-﻿import type { Product } from "@/types/product";
+import type { Product } from "@/types/product";
+
+/**
+ * TODO(CMS) : remplaçant temporaire du type "Products" (Phase 7 §1).
+ *
+ * IMPORTANT : ces données ne sont pas encore reliées au système de
+ * traduction next-intl — elles sont volontairement en anglais (langue
+ * de travail B2B internationale pour cette gamme) en attendant une
+ * vraie localisation champ par champ une fois le CMS branché
+ * (Phase 7 §0.2). Ne pas mélanger français/anglais ici tant que ce
+ * chantier n'est pas fait.
+ *
+ * Fiches produit volontairement épurées à la demande du client :
+ * seule l'essence ("African Mahogany (Khaya)") et l'appel à l'action
+ * apparaissent sous la photo — plus de nom de référence, dimensions
+ * ou description marketing par carte.
+ */
+export const parquetCapabilityStatement = {
+  eyebrow: "Solid Mahogany Parquet",
+  title: "Manufactured to Your Exact Specifications",
+  description:
+    "Any dimension, any thickness, any finish, any laying pattern — we produce your parquet to your precise requirements, not from a fixed catalogue. Our sawmill and finishing workshop adapt to your specification, from the first square meter to continuous supply programs.",
+};
+
+const SPECIES_LABEL = "African Mahogany (Khaya)";
+const QUOTE_CTA = "Request a Quote";
 
 export const featuredProducts: Product[] = [
   {
     id: "parquet-large-lame",
     slug: "parquet-massif-large-lame",
-    name: "Parquet Massif Large Lame",
+    name: "Solid Mahogany Parquet — Wide Plank",
     category: "parquet",
-    shortDescription:
-      "Grand format, veinage continu — pour des sols au caractère affirmé.",
-    dimensions: "14 × 180–220 × 1200–2200 mm",
-    species: "Acajou (Khaya spp.)",
+    dimensions: "Custom",
+    species: SPECIES_LABEL,
     fscCertified: true,
+    image: "/images/products/parquet/parquet-large-lame.jpg",
     placeholderTone: "obsidian",
     badge: "new",
   },
   {
     id: "parquet-chevron",
     slug: "parquet-massif-chevron",
-    name: "Parquet Massif Chevron",
+    name: "Solid Mahogany Parquet — Chevron",
     category: "parquet",
-    shortDescription:
-      "Lames pré-coupées à 45°, pose en chevron classique.",
-    dimensions: "14 × 120 × 600 mm",
-    species: "Acajou (Khaya spp.)",
+    dimensions: "Custom",
+    species: SPECIES_LABEL,
     fscCertified: true,
+    image: "/images/products/parquet/parquet-diagonal.jpg",
     placeholderTone: "champagne",
   },
   {
     id: "parquet-batons-rompus",
     slug: "parquet-massif-batons-rompus",
-    name: "Parquet Massif Bâtons Rompus",
+    name: "Solid Mahogany Parquet — Herringbone",
     category: "parquet",
-    shortDescription:
-      "Pose traditionnelle à angle droit, effet tressé.",
-    dimensions: "14 × 100 × 500 mm",
-    species: "Acajou (Khaya spp.)",
+    dimensions: "Custom",
+    species: SPECIES_LABEL,
     fscCertified: true,
+    image: "/images/products/parquet/parquet-overview.jpg",
     placeholderTone: "charcoal",
   },
   {
     id: "planche-27",
-    slug: "planches-sciees-acajou-27mm",
-    name: "Planches Sciées Acajou 27 mm",
+    slug: "sawn-boards-27mm",
+    name: "Sawn Boards — 27mm",
     category: "planche",
-    shortDescription:
-      "Sciage standard, séchage naturel — adapté à l'ébénisterie et à la menuiserie fine.",
-    dimensions: "27 × 150–300 × 1000–4000 mm",
-    species: "Acajou (Khaya spp.)",
+    dimensions: "27mm",
+    species: SPECIES_LABEL,
     fscCertified: true,
+    image: "/images/products/boards/board-27mm.jpg",
     placeholderTone: "charcoal",
   },
   {
     id: "planche-52",
-    slug: "planches-sciees-acajou-52mm",
-    name: "Planches Sciées Acajou 52 mm",
+    slug: "sawn-boards-52mm",
+    name: "Sawn Boards — 52mm",
     category: "planche",
-    shortDescription:
-      "Forte épaisseur — pour la structure, la charpente et les pièces massives.",
-    dimensions: "52 × 150–300 × 1000–4000 mm",
-    species: "Acajou (Khaya spp.)",
+    dimensions: "52mm",
+    species: SPECIES_LABEL,
     fscCertified: true,
+    image: "/images/products/boards/board-52mm.jpg",
     placeholderTone: "obsidian",
   },
 ];
 
-export const parquetRange = featuredProducts.filter(
-  (p) => p.category === "parquet"
-);
-export const boardRange = featuredProducts.filter(
-  (p) => p.category === "planche"
-);
+export const quoteCta = QUOTE_CTA;
+
+export const parquetRange = featuredProducts.filter((p) => p.category === "parquet");
+export const boardRange = featuredProducts.filter((p) => p.category === "planche");
+
+export const parquetFinishDetails = [
+  { image: "/images/products/parquet/parquet-joint-1.jpg", alt: "Tongue and groove joint detail" },
+  { image: "/images/products/parquet/parquet-joint-2.jpg", alt: "Finish and grain detail" },
+  { image: "/images/products/parquet/parquet-plank-detail.jpg", alt: "Solid parquet plank detail" },
+  { image: "/images/products/parquet/parquet-joint-3.jpg", alt: "Joint and edge detail" },
+];

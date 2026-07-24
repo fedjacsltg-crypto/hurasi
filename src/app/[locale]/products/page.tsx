@@ -4,7 +4,11 @@ import { getProductsPageContent } from "@/lib/content/products-page";
 import { RevealOnScroll } from "@/components/motion/RevealOnScroll";
 import { Button } from "@/components/ui/Button";
 import { ProductCard } from "@/components/sections/ProductCard";
-import { featuredProducts } from "@/lib/data/products";
+import {
+  featuredProducts,
+  parquetCapabilityStatement,
+  parquetFinishDetails,
+} from "@/lib/data/products";
 import type { Locale } from "@/lib/i18n/config";
 
 export default async function ProductsPage({
@@ -129,14 +133,18 @@ export default async function ProductsPage({
       {/* Gamme actuelle — réutilise le catalogue déjà construit */}
       <section className="border-y border-border bg-surface/40">
         <div className="mx-auto max-w-[1440px] px-6 py-14 sm:px-11 md:py-24">
-          <RevealOnScroll className="mb-11 md:mb-14">
+          <RevealOnScroll className="mb-11 max-w-[720px] md:mb-14">
             <p className="text-caption uppercase tracking-[0.12em] text-accent">
-              Bois certifié FSC
+              {parquetCapabilityStatement.eyebrow}
             </p>
             <h2 className="mt-4 font-display text-heading-l md:text-display-m">
-              Notre gamme actuelle
+              {parquetCapabilityStatement.title}
             </h2>
+            <p className="mt-4 text-body-m text-fg/60">
+              {parquetCapabilityStatement.description}
+            </p>
           </RevealOnScroll>
+
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {featuredProducts.map((product, i) => (
               <RevealOnScroll key={product.id} delay={i * 0.06}>
@@ -144,6 +152,20 @@ export default async function ProductsPage({
               </RevealOnScroll>
             ))}
           </div>
+
+          {/* Finish details — reinforces the "any finish" promise */}
+          <RevealOnScroll delay={0.2} className="mt-14">
+            <p className="mb-5 text-caption uppercase tracking-[0.1em] text-fg/50">
+              Finishes & Joints
+            </p>
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+              {parquetFinishDetails.map((item) => (
+                <div key={item.image} className="relative aspect-square w-full overflow-hidden">
+                  <Image src={item.image} alt={item.alt} fill className="object-cover" />
+                </div>
+              ))}
+            </div>
+          </RevealOnScroll>
         </div>
       </section>
 
