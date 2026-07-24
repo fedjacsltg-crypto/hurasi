@@ -61,3 +61,4 @@ Pages.
 2. Construire les 10 pages internes
 3. Brancher un CMS (adaptateur `lib/cms/`)
 4. Configurer le déploiement Cloudflare Pages
+# test
