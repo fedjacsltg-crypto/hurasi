@@ -3,9 +3,13 @@
 import { useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
-import { locales, localeNames, type Locale } from "@/lib/i18n/config";
+import { locales, localeNames, localeFlags, type Locale } from "@/lib/i18n/config";
 import { cn } from "@/lib/utils/cn";
 
+/**
+ * Rappel Phase 1 §6 / Phase 3 §11 : le changement de langue préserve la
+ * route courante, jamais un retour forcé à l'accueil.
+ */
 export function LanguageSwitcher() {
   const [open, setOpen] = useState(false);
   const locale = useLocale() as Locale;
@@ -27,15 +31,16 @@ export function LanguageSwitcher() {
         aria-label={t("languageSwitcher")}
         aria-expanded={open}
         onClick={() => setOpen((v) => !v)}
-        className="text-caption uppercase tracking-[0.1em] opacity-80 hover:opacity-100 transition-opacity"
+        className="flex items-center gap-1.5 text-caption uppercase tracking-[0.1em] opacity-80 hover:opacity-100 transition-opacity"
       >
+        <span aria-hidden>{localeFlags[locale]}</span>
         {locale.toUpperCase()}
       </button>
 
       {open && (
         <ul
           role="menu"
-          className="absolute end-0 top-full mt-3 min-w-[160px] border border-border bg-bg py-2 text-fg shadow-2"
+          className="absolute end-0 top-full mt-3 min-w-[180px] border border-border bg-bg py-2 text-fg shadow-2"
         >
           {locales.map((code) => (
             <li key={code} role="none">
@@ -45,10 +50,11 @@ export function LanguageSwitcher() {
                 aria-current={code === locale}
                 onClick={() => switchTo(code)}
                 className={cn(
-                  "block w-full px-4 py-2 text-start text-body-s hover:bg-fg/5",
+                  "flex w-full items-center gap-2.5 px-4 py-2 text-start text-body-s hover:bg-fg/5",
                   code === locale && "text-accent"
                 )}
               >
+                <span aria-hidden>{localeFlags[code]}</span>
                 {localeNames[code]}
               </button>
             </li>

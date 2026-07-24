@@ -38,8 +38,20 @@ export const localeNames: Record<Locale, string> = {
 export const localeFormats: Record<Locale, string> = {
   en: "en-US",
   fr: "fr-FR",
-  pt: "pt-PT",
+  pt: "pt-BR",
   ar: "ar-SA",
   zh: "zh-CN",
   ru: "ru-RU",
+};
+
+/** Drapeaux affichés à côté de chaque langue dans le sélecteur.
+ * Le portugais affiche volontairement deux drapeaux (Brésil + Portugal)
+ * puisqu'une seule locale "pt" sert les deux marchés pour l'instant. */
+export const localeFlags: Record<Locale, string> = {
+  en: "🇬🇧",
+  fr: "🇫🇷",
+  pt: "🇧🇷🇵🇹",
+  ar: "🇸🇦",
+  zh: "🇨🇳",
+  ru: "🇷🇺",
 };

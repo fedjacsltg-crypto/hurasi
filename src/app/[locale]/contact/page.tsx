@@ -1,8 +1,14 @@
-﻿import { setRequestLocale } from "next-intl/server";
+import { Suspense } from "react";
+import { setRequestLocale } from "next-intl/server";
 import { RevealOnScroll } from "@/components/motion/RevealOnScroll";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { QuoteForm } from "@/components/sections/QuoteForm";
 
+/**
+ * Page Contact — volontairement AUCUNE coordonnée publique (email,
+ * téléphone, adresse) affichée nulle part, comme demandé. Toute
+ * communication passe par les formulaires ci-dessous.
+ */
 export default async function ContactPage({
   params,
 }: {
@@ -13,6 +19,7 @@ export default async function ContactPage({
 
   return (
     <>
+      {/* Hero */}
       <section className="relative flex min-h-[60svh] items-center justify-center overflow-hidden bg-obsidian text-pearl">
         <div
           aria-hidden
@@ -30,6 +37,7 @@ export default async function ContactPage({
         </RevealOnScroll>
       </section>
 
+      {/* Contact form */}
       <section className="mx-auto max-w-[900px] px-6 py-14 sm:px-11 md:py-24">
         <RevealOnScroll>
           <p className="text-caption uppercase tracking-[0.12em] text-accent">
@@ -44,6 +52,7 @@ export default async function ContactPage({
         </RevealOnScroll>
       </section>
 
+      {/* Quote form */}
       <section className="border-t border-border bg-surface/40">
         <div className="mx-auto max-w-[900px] px-6 py-14 sm:px-11 md:py-24">
           <RevealOnScroll>
@@ -60,7 +69,9 @@ export default async function ContactPage({
             </p>
           </RevealOnScroll>
           <RevealOnScroll delay={0.1} className="mt-11">
-            <QuoteForm />
+            <Suspense fallback={null}>
+              <QuoteForm />
+            </Suspense>
           </RevealOnScroll>
         </div>
       </section>

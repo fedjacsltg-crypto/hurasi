@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/Button";
 import { estimateContainer } from "@/lib/quote/container-calculator";
@@ -32,6 +33,14 @@ const labelClass = "text-caption uppercase tracking-[0.08em] text-fg/50";
 type Status = "idle" | "submitting" | "success" | "error";
 
 export function QuoteForm() {
+  const searchParams = useSearchParams();
+  const galleryApplication = searchParams.get("application");
+  const galleryPrefill = galleryApplication
+    ? `Inspired by: ${galleryApplication}${
+        searchParams.get("species") ? ` — ${searchParams.get("species")}` : ""
+      }`
+    : "";
+
   const [dimensions, setDimensions] = useState<DimensionRow[]>([emptyRow()]);
   const [machining, setMachining] = useState<string[]>([]);
   const [status, setStatus] = useState<Status>("idle");
@@ -344,7 +353,13 @@ export function QuoteForm() {
         <label className={labelClass} htmlFor="comments">
           Additional Comments
         </label>
-        <textarea id="comments" name="comments" rows={4} className={`${fieldClass} mt-2 resize-none`} />
+        <textarea
+          id="comments"
+          name="comments"
+          rows={4}
+          defaultValue={galleryPrefill}
+          className={`${fieldClass} mt-2 resize-none`}
+        />
       </fieldset>
 
       <div className="flex items-start gap-3">

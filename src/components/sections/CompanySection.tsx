@@ -20,19 +20,20 @@ export async function CompanySection() {
           </p>
 
           <h2 className="mt-5 font-display text-heading-l md:text-display-m">
-            Façonné par la patience, pensé pour durer.
+            Grown with patience. Built to last generations.
           </h2>
 
           <p className="mt-9 text-body-l text-fg/70">
-            Chaque pièce naît d&apos;un geste répété des centaines de fois
-            avant d&apos;être jugé digne de porter notre nom. Nous ne
-            cherchons pas la vitesse — nous cherchons la pièce qui traversera
-            les générations sans jamais paraître datée.
+            Every board we deliver reflects decades of forestry investment,
+            not a single harvest. We do not chase speed — we cultivate African
+            Mahogany that meets the standards of the world&apos;s most
+            demanding professionals.
           </p>
 
           <p className="mt-6 text-body-l text-fg/70">
-            Cette exigence, nous la tenons d&apos;un savoir-faire transmis,
-            affiné, jamais figé.
+            This discipline comes from a fully integrated model: our own
+            FSC-certified plantations, our own FSC-certified sawmill, and
+            complete traceability from seedling to shipment.
           </p>
         </RevealOnScroll>
       </div>
