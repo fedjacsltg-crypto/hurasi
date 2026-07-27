@@ -13,7 +13,8 @@
     "skipToContent": "الانتقال إلى المحتوى",
     "languageSwitcher": "تغيير اللغة",
     "mainNavigation": "التنقل الرئيسي",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "blog": "المدونة"
   },
   "hero": {
     "tagline": "خشب نبيل. قيمة خالدة.",
@@ -263,5 +264,49 @@
     "ctaSubtitle": "سيسعد أخصائيو التصدير لدينا بمساعدتكم.",
     "ctaPrimary": "طلب عرض سعر",
     "ctaSecondary": "تواصل مع فريقنا"
+  },
+  "blogCategories": {
+    "mahogany": "خشب الماهوجني الأفريقي",
+    "architecture": "العمارة",
+    "sustainability": "الاستدامة",
+    "fscCertification": "شهادة FSC",
+    "exportLogistics": "التصدير واللوجستيات",
+    "technicalGuides": "أدلة تقنية",
+    "marketAnalysis": "تحليل السوق",
+    "furnitureManufacturing": "تصنيع الأثاث",
+    "decking": "الشرفات والمعيشة الخارجية",
+    "buyingGuides": "أدلة الشراء"
+  },
+  "blogDifficulty": {
+    "beginner": "مبتدئ",
+    "intermediate": "متوسط",
+    "advanced": "متقدم"
+  },
+  "blogPage": {
+    "searchPlaceholder": "ابحث عن مقال...",
+    "allFilter": "الكل",
+    "sortNewest": "الأحدث",
+    "sortOldest": "الأقدم",
+    "noResults": "لم يتم العثور على مقالات لـ \"{query}\"",
+    "featured": "مميز",
+    "readingTime": "{minutes} دقيقة قراءة",
+    "updated": "آخر تحديث",
+    "tableOfContents": "جدول المحتويات",
+    "share": "مشاركة",
+    "copyLink": "نسخ الرابط",
+    "linkCopied": "تم نسخ الرابط!",
+    "relatedArticles": "مقالات ذات صلة",
+    "newsletterTitle": "ابقوا على اطلاع",
+    "newsletterSubtitle": "احصلوا على رؤى القطاع والمقالات التقنية مباشرة في بريدكم الإلكتروني.",
+    "newsletterPlaceholder": "بريدكم الإلكتروني",
+    "newsletterSubscribe": "اشتراك",
+    "newsletterSending": "جارٍ الاشتراك…",
+    "newsletterSuccess": "شكرًا لكم — تم تسجيل اشتراككم.",
+    "newsletterError": "حدث خطأ ما. يرجى المحاولة مرة أخرى.",
+    "ctaTitle": "هل أنتم مستعدون للحصول على خشب الماهوجني الأفريقي الفاخر؟",
+    "ctaPrimary": "طلب عرض سعر",
+    "ctaSecondary": "تواصلوا مع فريق التصدير لدينا",
+    "breadcrumbHome": "الرئيسية",
+    "breadcrumbBlog": "المدونة"
   }
 }

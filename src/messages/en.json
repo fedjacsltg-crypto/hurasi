@@ -6,6 +6,7 @@
     "manufacturing": "Craftsmanship",
     "sustainability": "Sustainability",
     "gallery": "Gallery",
+    "blog": "Blog",
     "faq": "FAQ",
     "projects": "Projects",
     "news": "Journal",
@@ -263,5 +264,49 @@
     "ctaSubtitle": "Our export specialists will gladly assist you.",
     "ctaPrimary": "Request a Quotation",
     "ctaSecondary": "Contact Our Team"
+  },
+  "blogCategories": {
+    "mahogany": "African Mahogany",
+    "architecture": "Architecture",
+    "sustainability": "Sustainability",
+    "fscCertification": "FSC Certification",
+    "exportLogistics": "Export & Logistics",
+    "technicalGuides": "Technical Guides",
+    "marketAnalysis": "Market Analysis",
+    "furnitureManufacturing": "Furniture Manufacturing",
+    "decking": "Decking & Outdoor Living",
+    "buyingGuides": "Buying Guides"
+  },
+  "blogDifficulty": {
+    "beginner": "Beginner",
+    "intermediate": "Intermediate",
+    "advanced": "Advanced"
+  },
+  "blogPage": {
+    "searchPlaceholder": "Search articles...",
+    "allFilter": "All",
+    "sortNewest": "Newest",
+    "sortOldest": "Oldest",
+    "noResults": "No articles found for \"{query}\"",
+    "featured": "Featured",
+    "readingTime": "{minutes} min read",
+    "updated": "Updated",
+    "tableOfContents": "Table of Contents",
+    "share": "Share",
+    "copyLink": "Copy link",
+    "linkCopied": "Link copied!",
+    "relatedArticles": "Related Articles",
+    "newsletterTitle": "Stay Informed",
+    "newsletterSubtitle": "Receive industry insights and technical articles directly in your inbox.",
+    "newsletterPlaceholder": "Your email address",
+    "newsletterSubscribe": "Subscribe",
+    "newsletterSending": "Subscribing…",
+    "newsletterSuccess": "Thank you — you're subscribed.",
+    "newsletterError": "Something went wrong. Please try again.",
+    "ctaTitle": "Ready to source premium African Mahogany?",
+    "ctaPrimary": "Request a Quotation",
+    "ctaSecondary": "Contact Our Export Team",
+    "breadcrumbHome": "Home",
+    "breadcrumbBlog": "Blog"
   }
 }

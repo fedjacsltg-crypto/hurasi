@@ -13,7 +13,8 @@
     "skipToContent": "Перейти к содержанию",
     "languageSwitcher": "Сменить язык",
     "mainNavigation": "Основная навигация",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "blog": "Блог"
   },
   "hero": {
     "tagline": "Благородное дерево. Непреходящая ценность.",
@@ -263,5 +264,49 @@
     "ctaSubtitle": "Наши специалисты по экспорту с радостью вам помогут.",
     "ctaPrimary": "Запросить предложение",
     "ctaSecondary": "Связаться с нашей командой"
+  },
+  "blogCategories": {
+    "mahogany": "Африканское красное дерево",
+    "architecture": "Архитектура",
+    "sustainability": "Устойчивое развитие",
+    "fscCertification": "Сертификация FSC",
+    "exportLogistics": "Экспорт и логистика",
+    "technicalGuides": "Технические руководства",
+    "marketAnalysis": "Анализ рынка",
+    "furnitureManufacturing": "Производство мебели",
+    "decking": "Террасы и уличная мебель",
+    "buyingGuides": "Руководства по закупке"
+  },
+  "blogDifficulty": {
+    "beginner": "Начальный уровень",
+    "intermediate": "Средний уровень",
+    "advanced": "Продвинутый уровень"
+  },
+  "blogPage": {
+    "searchPlaceholder": "Поиск статей...",
+    "allFilter": "Все",
+    "sortNewest": "Сначала новые",
+    "sortOldest": "Сначала старые",
+    "noResults": "По запросу «{query}» статей не найдено",
+    "featured": "Рекомендуем",
+    "readingTime": "{minutes} мин. чтения",
+    "updated": "Обновлено",
+    "tableOfContents": "Содержание",
+    "share": "Поделиться",
+    "copyLink": "Скопировать ссылку",
+    "linkCopied": "Ссылка скопирована!",
+    "relatedArticles": "Похожие статьи",
+    "newsletterTitle": "Будьте в курсе",
+    "newsletterSubtitle": "Получайте отраслевую аналитику и технические статьи прямо на вашу почту.",
+    "newsletterPlaceholder": "Ваш email",
+    "newsletterSubscribe": "Подписаться",
+    "newsletterSending": "Подписка…",
+    "newsletterSuccess": "Спасибо — вы подписаны.",
+    "newsletterError": "Произошла ошибка. Попробуйте снова.",
+    "ctaTitle": "Готовы приобрести премиальное африканское красное дерево?",
+    "ctaPrimary": "Запросить предложение",
+    "ctaSecondary": "Связаться с экспортной командой",
+    "breadcrumbHome": "Главная",
+    "breadcrumbBlog": "Блог"
   }
 }

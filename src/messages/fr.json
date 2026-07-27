@@ -13,7 +13,8 @@
     "skipToContent": "Aller au contenu",
     "languageSwitcher": "Changer de langue",
     "mainNavigation": "Navigation principale",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "blog": "Blog"
   },
   "hero": {
     "tagline": "Bois Noble. Valeur Intemporelle.",
@@ -263,5 +264,49 @@
     "ctaSubtitle": "Nos spécialistes export se feront un plaisir de vous aider.",
     "ctaPrimary": "Demander un devis",
     "ctaSecondary": "Contacter notre équipe"
+  },
+  "blogCategories": {
+    "mahogany": "Acajou africain",
+    "architecture": "Architecture",
+    "sustainability": "Durabilité",
+    "fscCertification": "Certification FSC",
+    "exportLogistics": "Export & Logistique",
+    "technicalGuides": "Guides techniques",
+    "marketAnalysis": "Analyse de marché",
+    "furnitureManufacturing": "Fabrication de mobilier",
+    "decking": "Terrasses & Extérieur",
+    "buyingGuides": "Guides d'achat"
+  },
+  "blogDifficulty": {
+    "beginner": "Débutant",
+    "intermediate": "Intermédiaire",
+    "advanced": "Avancé"
+  },
+  "blogPage": {
+    "searchPlaceholder": "Rechercher un article...",
+    "allFilter": "Tout",
+    "sortNewest": "Plus récents",
+    "sortOldest": "Plus anciens",
+    "noResults": "Aucun article trouvé pour « {query} »",
+    "featured": "À la une",
+    "readingTime": "{minutes} min de lecture",
+    "updated": "Mis à jour le",
+    "tableOfContents": "Sommaire",
+    "share": "Partager",
+    "copyLink": "Copier le lien",
+    "linkCopied": "Lien copié !",
+    "relatedArticles": "Articles liés",
+    "newsletterTitle": "Restez informé",
+    "newsletterSubtitle": "Recevez nos analyses sectorielles et articles techniques directement dans votre boîte mail.",
+    "newsletterPlaceholder": "Votre adresse e-mail",
+    "newsletterSubscribe": "S'abonner",
+    "newsletterSending": "Inscription en cours…",
+    "newsletterSuccess": "Merci — vous êtes inscrit.",
+    "newsletterError": "Une erreur est survenue. Veuillez réessayer.",
+    "ctaTitle": "Prêt à vous approvisionner en acajou africain premium ?",
+    "ctaPrimary": "Demander un devis",
+    "ctaSecondary": "Contacter notre équipe export",
+    "breadcrumbHome": "Accueil",
+    "breadcrumbBlog": "Blog"
   }
 }

@@ -13,7 +13,8 @@
     "skipToContent": "Ir para o conteúdo",
     "languageSwitcher": "Mudar de idioma",
     "mainNavigation": "Navegação principal",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "blog": "Blog"
   },
   "hero": {
     "tagline": "Madeira Nobre. Valor Intemporal.",
@@ -263,5 +264,49 @@
     "ctaSubtitle": "Nossos especialistas em exportação terão prazer em ajudá-lo.",
     "ctaPrimary": "Solicitar Orçamento",
     "ctaSecondary": "Fale com Nossa Equipe"
+  },
+  "blogCategories": {
+    "mahogany": "Mogno Africano",
+    "architecture": "Arquitetura",
+    "sustainability": "Sustentabilidade",
+    "fscCertification": "Certificação FSC",
+    "exportLogistics": "Exportação e Logística",
+    "technicalGuides": "Guias Técnicos",
+    "marketAnalysis": "Análise de Mercado",
+    "furnitureManufacturing": "Fabricação de Móveis",
+    "decking": "Decks e Área Externa",
+    "buyingGuides": "Guias de Compra"
+  },
+  "blogDifficulty": {
+    "beginner": "Iniciante",
+    "intermediate": "Intermediário",
+    "advanced": "Avançado"
+  },
+  "blogPage": {
+    "searchPlaceholder": "Pesquisar artigos...",
+    "allFilter": "Todos",
+    "sortNewest": "Mais recentes",
+    "sortOldest": "Mais antigos",
+    "noResults": "Nenhum artigo encontrado para \"{query}\"",
+    "featured": "Destaque",
+    "readingTime": "{minutes} min de leitura",
+    "updated": "Atualizado em",
+    "tableOfContents": "Sumário",
+    "share": "Compartilhar",
+    "copyLink": "Copiar link",
+    "linkCopied": "Link copiado!",
+    "relatedArticles": "Artigos Relacionados",
+    "newsletterTitle": "Fique Informado",
+    "newsletterSubtitle": "Receba análises do setor e artigos técnicos diretamente na sua caixa de entrada.",
+    "newsletterPlaceholder": "Seu e-mail",
+    "newsletterSubscribe": "Inscrever-se",
+    "newsletterSending": "Inscrevendo…",
+    "newsletterSuccess": "Obrigado — você está inscrito.",
+    "newsletterError": "Ocorreu um erro. Tente novamente.",
+    "ctaTitle": "Pronto para adquirir Mogno Africano premium?",
+    "ctaPrimary": "Solicitar Orçamento",
+    "ctaSecondary": "Fale com Nossa Equipe de Exportação",
+    "breadcrumbHome": "Início",
+    "breadcrumbBlog": "Blog"
   }
 }
