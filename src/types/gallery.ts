@@ -2,6 +2,7 @@ export type GalleryCategory =
   | "luxury-residences"
   | "hotels-resorts"
   | "yachts"
+  | "private-jets"
   | "wine-cellars"
   | "fine-dining"
   | "corporate-hq"

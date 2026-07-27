@@ -9,6 +9,7 @@ export const GALLERY_CATEGORIES: { id: GalleryCategory; label: string; icon: str
   { id: "luxury-residences", label: "Luxury Residences", icon: "🏡" },
   { id: "hotels-resorts", label: "Hotels & Resorts", icon: "🏨" },
   { id: "yachts", label: "Yachts", icon: "🛥️" },
+  { id: "private-jets", label: "Private Jets", icon: "✈️" },
   { id: "wine-cellars", label: "Wine Cellars", icon: "🍷" },
   { id: "fine-dining", label: "Fine Dining", icon: "🍽️" },
   { id: "corporate-hq", label: "Corporate HQ", icon: "🏢" },
