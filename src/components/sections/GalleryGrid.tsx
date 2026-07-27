@@ -95,6 +95,7 @@ export function GalleryGrid({ items }: GalleryGridProps) {
                 src={item.image}
                 alt={item.alt}
                 fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="object-cover transition-transform duration-700 [transition-timing-function:var(--ease-signature)] group-hover:scale-[1.04]"
               />
               <div
@@ -158,6 +159,7 @@ export function GalleryGrid({ items }: GalleryGridProps) {
                   src={activeItem.image}
                   alt={activeItem.alt}
                   fill
+                  sizes="(max-width: 768px) 100vw, 700px"
                   className="object-cover"
                 />
               </div>

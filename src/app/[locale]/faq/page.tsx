@@ -46,6 +46,7 @@ export default async function FaqPage({
           aria-hidden
           fill
           priority
+          sizes="100vw"
           className="object-cover opacity-30"
         />
         <div

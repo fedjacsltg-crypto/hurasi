@@ -24,6 +24,7 @@ export default async function ForestsPage({
           alt={originIntro.title}
           fill
           priority
+          sizes="100vw"
           className="object-cover opacity-60"
         />
         <div
@@ -97,6 +98,7 @@ export default async function ForestsPage({
                     src={section.image}
                     alt={section.imageAlt}
                     fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover"
                   />
                 </div>
@@ -112,6 +114,7 @@ export default async function ForestsPage({
           src={originClosing.image}
           alt={originClosing.imageAlt}
           fill
+          sizes="100vw"
           className="object-cover opacity-30"
         />
         <div

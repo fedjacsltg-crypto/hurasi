@@ -24,6 +24,7 @@ export default async function AboutPage({
           alt={aboutIntro.title}
           fill
           priority
+          sizes="100vw"
           className="object-cover opacity-55"
         />
         <div
@@ -100,6 +101,7 @@ export default async function AboutPage({
                       src={section.image!}
                       alt={section.imageAlt ?? section.title}
                       fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
                       className="object-cover"
                     />
                   </div>
@@ -116,6 +118,7 @@ export default async function AboutPage({
           src={aboutClosing.image}
           alt={aboutClosing.imageAlt}
           fill
+          sizes="100vw"
           className="object-cover opacity-30"
         />
         <div

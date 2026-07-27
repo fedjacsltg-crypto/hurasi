@@ -41,6 +41,7 @@ export default async function ProductsPage({
           alt={productsIntro.title}
           fill
           priority
+          sizes="100vw"
           className="object-cover opacity-50"
         />
         <div
@@ -88,6 +89,7 @@ export default async function ProductsPage({
                 src={materialSection.image}
                 alt={materialSection.imageAlt}
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>
@@ -123,6 +125,7 @@ export default async function ProductsPage({
                 src={specSection.image}
                 alt={specSection.imageAlt}
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>
@@ -161,7 +164,7 @@ export default async function ProductsPage({
             <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
               {parquetFinishDetails.map((item) => (
                 <div key={item.image} className="relative aspect-square w-full overflow-hidden">
-                  <Image src={item.image} alt={item.alt} fill className="object-cover" />
+                  <Image src={item.image} alt={item.alt} fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover" />
                 </div>
               ))}
             </div>
@@ -184,7 +187,7 @@ export default async function ProductsPage({
           {professionalCategories.map((cat, i) => (
             <RevealOnScroll key={cat.id} delay={i * 0.06}>
               <div className="relative aspect-[4/5] w-full overflow-hidden">
-                <Image src={cat.image} alt={cat.imageAlt} fill className="object-cover" />
+                <Image src={cat.image} alt={cat.imageAlt} fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" />
                 <div
                   aria-hidden
                   className="absolute inset-0 bg-gradient-to-t from-obsidian/80 via-obsidian/10 to-transparent"
@@ -226,6 +229,7 @@ export default async function ProductsPage({
                 src={qualitySection.image}
                 alt={qualitySection.imageAlt}
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>
@@ -252,6 +256,7 @@ export default async function ProductsPage({
                 src={productionSection.image}
                 alt={productionSection.imageAlt}
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>
@@ -296,7 +301,7 @@ export default async function ProductsPage({
           {applicationsGallery.map((item, i) => (
             <RevealOnScroll key={item.image} delay={i * 0.06}>
               <div className="relative aspect-[3/4] w-full overflow-hidden">
-                <Image src={item.image} alt={item.alt} fill className="object-cover" />
+                <Image src={item.image} alt={item.alt} fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover" />
               </div>
             </RevealOnScroll>
           ))}
@@ -309,6 +314,7 @@ export default async function ProductsPage({
           src={productsClosing.image}
           alt={productsClosing.imageAlt}
           fill
+          sizes="100vw"
           className="object-cover opacity-30"
         />
         <div

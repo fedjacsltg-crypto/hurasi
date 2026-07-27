@@ -41,6 +41,7 @@ export function ProductCard({ product, featured = false }: ProductCardProps) {
             src={product.image}
             alt={product.species}
             fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             className="object-cover transition-transform duration-700 [transition-timing-function:var(--ease-signature)] group-hover:scale-[1.04]"
           />
         )}

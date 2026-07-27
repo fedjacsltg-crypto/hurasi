@@ -51,6 +51,7 @@ function TextImageSection({
                 src={section.image!}
                 alt={section.imageAlt ?? section.title}
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>
@@ -93,6 +94,7 @@ export default async function SustainabilityPage({
           alt={sustainabilityIntro.title}
           fill
           priority
+          sizes="100vw"
           className="object-cover opacity-55"
         />
         <div
@@ -135,6 +137,7 @@ export default async function SustainabilityPage({
                     src={phase.image}
                     alt={phase.imageAlt}
                     fill
+                    sizes="(max-width: 768px) 50vw, 20vw"
                     className="object-cover"
                   />
                   <div
@@ -177,6 +180,7 @@ export default async function SustainabilityPage({
           src={sustainabilityClosing.image}
           alt={sustainabilityClosing.imageAlt}
           fill
+          sizes="100vw"
           className="object-cover opacity-35"
         />
         <div
