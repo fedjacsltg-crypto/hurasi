@@ -28,10 +28,12 @@
     "cta": "Saber mais"
   },
   "stats": {
-    "experience": "Anos de experiência",
-    "exported": "m³ exportados",
-    "countries": "Países servidos",
-    "shipping": "Certificado FSC"
+    "certified": "Plantações e serraria certificadas",
+    "custom": "Fabricado sob medida, nunca de catálogo",
+    "directValue": "Direto",
+    "direct": "Da nossa floresta ao seu contêiner",
+    "fullValue": "Completa",
+    "traceability": "Rastreabilidade da muda ao embarque"
   },
   "footer": {
     "tagline": "Madeira Nobre. Valor Intemporal.",

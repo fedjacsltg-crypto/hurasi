@@ -28,10 +28,12 @@
     "cta": "了解更多"
   },
   "stats": {
-    "experience": "年经验",
-    "exported": "立方米出口量",
-    "countries": "服务国家",
-    "shipping": "FSC认证"
+    "certified": "认证种植园与锯木厂",
+    "custom": "按订单定制生产，从不套用目录",
+    "directValue": "直接",
+    "direct": "从我们的森林直达您的集装箱",
+    "fullValue": "全程",
+    "traceability": "从幼苗到发货的可追溯性"
   },
   "footer": {
     "tagline": "尊贵之木,恒久价值。",

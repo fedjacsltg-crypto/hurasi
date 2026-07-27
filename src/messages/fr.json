@@ -28,10 +28,12 @@
     "cta": "En savoir plus"
   },
   "stats": {
-    "experience": "Années d'expérience",
-    "exported": "m³ exportés",
-    "countries": "Pays desservis",
-    "shipping": "Certifié FSC"
+    "certified": "Plantations et scierie certifiées",
+    "custom": "Fabriqué sur mesure, jamais sur catalogue",
+    "directValue": "Direct",
+    "direct": "De notre forêt à votre conteneur",
+    "fullValue": "Complète",
+    "traceability": "Traçabilité du plant à l'expédition"
   },
   "footer": {
     "tagline": "Bois Noble. Valeur Intemporelle.",

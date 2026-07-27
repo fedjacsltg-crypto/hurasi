@@ -28,10 +28,12 @@
     "cta": "Discover more"
   },
   "stats": {
-    "experience": "Years of experience",
-    "exported": "m³ exported",
-    "countries": "Countries served",
-    "shipping": "FSC certified"
+    "certified": "Certified plantations & sawmill",
+    "custom": "Custom-manufactured to order",
+    "directValue": "Direct",
+    "direct": "From our forest to your container",
+    "fullValue": "Full",
+    "traceability": "Traceability from seedling to shipment"
   },
   "footer": {
     "tagline": "Noble Wood. Timeless Value.",

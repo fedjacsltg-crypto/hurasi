@@ -7,17 +7,21 @@ import { RevealOnScroll } from "@/components/motion/RevealOnScroll";
  * Sustainability). Séparateurs fins plutôt que des cartes avec ombre
  * (Phase 2 §6, alternative signature).
  *
- * ⚠️ CHIFFRES PLACEHOLDER — à remplacer par les vrais chiffres HURASI
- * (années d'existence, volume exporté réel, nombre de pays desservis).
+ * Affirmations volontairement factuelles et vérifiables (pas de chiffres
+ * inventés type "20+ ans d'expérience" ou "50 000+ m³ exportés") — voir
+ * décision client du 27/07/2026 : remplacer par des faits défendables
+ * cohérents avec ce qui est déjà affirmé ailleurs sur le site (plantation
+ * + scierie propres certifiées FSC, fabrication sur mesure, intégration
+ * verticale, traçabilité complète).
  */
 export async function StatsBar() {
   const t = await getTranslations("stats");
 
   const figures = [
-    { value: "20+", label: t("experience") },
-    { value: "50 000+", label: t("exported") },
-    { value: "40+", label: t("countries") },
-    { value: "FSC", label: t("shipping") },
+    { value: "FSC", label: t("certified") },
+    { value: "100%", label: t("custom") },
+    { value: t("directValue"), label: t("direct") },
+    { value: t("fullValue"), label: t("traceability") },
   ];
 
   return (
