@@ -12,7 +12,8 @@
     "getInTouch": "Nous contacter",
     "skipToContent": "Aller au contenu",
     "languageSwitcher": "Changer de langue",
-    "mainNavigation": "Navigation principale"
+    "mainNavigation": "Navigation principale",
+    "faq": "FAQ"
   },
   "hero": {
     "tagline": "Bois Noble. Valeur Intemporelle.",
@@ -236,5 +237,31 @@
   "sustainabilityPage": {
     "lifeCycleEyebrow": "Du plant à l'expédition",
     "lifeCycleTitle": "Le cycle de vie complet"
+  },
+  "faqCategories": {
+    "mahogany": "L'acajou africain",
+    "products": "Produits & Spécifications",
+    "quality": "Contrôle qualité",
+    "sustainability": "Durabilité & FSC",
+    "export": "Export",
+    "leadTimes": "Délais de livraison",
+    "orders": "Commandes",
+    "pricing": "Tarification",
+    "payment": "Paiement",
+    "technical": "Informations techniques",
+    "care": "Entretien",
+    "business": "Relation commerciale"
+  },
+  "faqPage": {
+    "searchPlaceholder": "Rechercher une question...",
+    "clearSearch": "Effacer la recherche",
+    "allFilter": "Tout",
+    "expandAll": "Tout développer",
+    "collapseAll": "Tout réduire",
+    "noResults": "Aucun résultat pour « {query} »",
+    "ctaTitle": "Vous n'avez pas trouvé votre réponse ?",
+    "ctaSubtitle": "Nos spécialistes export se feront un plaisir de vous aider.",
+    "ctaPrimary": "Demander un devis",
+    "ctaSecondary": "Contacter notre équipe"
   }
 }

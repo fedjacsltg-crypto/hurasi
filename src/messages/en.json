@@ -6,6 +6,7 @@
     "manufacturing": "Craftsmanship",
     "sustainability": "Sustainability",
     "gallery": "Gallery",
+    "faq": "FAQ",
     "projects": "Projects",
     "news": "Journal",
     "contact": "Contact Us",
@@ -236,5 +237,31 @@
   "sustainabilityPage": {
     "lifeCycleEyebrow": "From Seedling to Shipment",
     "lifeCycleTitle": "The Complete Life Cycle"
+  },
+  "faqCategories": {
+    "mahogany": "About African Mahogany",
+    "products": "Products & Specifications",
+    "quality": "Quality Control",
+    "sustainability": "Sustainability & FSC",
+    "export": "Export",
+    "leadTimes": "Lead Times",
+    "orders": "Orders",
+    "pricing": "Pricing",
+    "payment": "Payment",
+    "technical": "Technical Information",
+    "care": "Care & Maintenance",
+    "business": "Business Relationship"
+  },
+  "faqPage": {
+    "searchPlaceholder": "Search a question...",
+    "clearSearch": "Clear search",
+    "allFilter": "All",
+    "expandAll": "Expand all",
+    "collapseAll": "Collapse all",
+    "noResults": "No results found for \"{query}\"",
+    "ctaTitle": "Didn't find the answer?",
+    "ctaSubtitle": "Our export specialists will gladly assist you.",
+    "ctaPrimary": "Request a Quotation",
+    "ctaSecondary": "Contact Our Team"
   }
 }

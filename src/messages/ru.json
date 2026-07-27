@@ -12,7 +12,8 @@
     "getInTouch": "Связаться с нами",
     "skipToContent": "Перейти к содержанию",
     "languageSwitcher": "Сменить язык",
-    "mainNavigation": "Основная навигация"
+    "mainNavigation": "Основная навигация",
+    "faq": "FAQ"
   },
   "hero": {
     "tagline": "Благородное дерево. Непреходящая ценность.",
@@ -236,5 +237,31 @@
   "sustainabilityPage": {
     "lifeCycleEyebrow": "От саженца до отгрузки",
     "lifeCycleTitle": "Полный жизненный цикл"
+  },
+  "faqCategories": {
+    "mahogany": "Об африканском красном дереве",
+    "products": "Продукция и спецификации",
+    "quality": "Контроль качества",
+    "sustainability": "Устойчивое развитие и FSC",
+    "export": "Экспорт",
+    "leadTimes": "Сроки поставки",
+    "orders": "Заказы",
+    "pricing": "Ценообразование",
+    "payment": "Оплата",
+    "technical": "Техническая информация",
+    "care": "Уход и обслуживание",
+    "business": "Деловые отношения"
+  },
+  "faqPage": {
+    "searchPlaceholder": "Поиск по вопросу...",
+    "clearSearch": "Очистить поиск",
+    "allFilter": "Все",
+    "expandAll": "Развернуть все",
+    "collapseAll": "Свернуть все",
+    "noResults": "По запросу «{query}» ничего не найдено",
+    "ctaTitle": "Не нашли ответ?",
+    "ctaSubtitle": "Наши специалисты по экспорту с радостью вам помогут.",
+    "ctaPrimary": "Запросить предложение",
+    "ctaSecondary": "Связаться с нашей командой"
   }
 }

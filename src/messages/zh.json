@@ -12,7 +12,8 @@
     "getInTouch": "联系我们",
     "skipToContent": "跳至内容",
     "languageSwitcher": "切换语言",
-    "mainNavigation": "主导航"
+    "mainNavigation": "主导航",
+    "faq": "FAQ"
   },
   "hero": {
     "tagline": "尊贵之木,恒久价值。",
@@ -236,5 +237,31 @@
   "sustainabilityPage": {
     "lifeCycleEyebrow": "从幼苗到发货",
     "lifeCycleTitle": "完整的生命周期"
+  },
+  "faqCategories": {
+    "mahogany": "关于非洲红木",
+    "products": "产品与规格",
+    "quality": "质量控制",
+    "sustainability": "可持续发展与FSC",
+    "export": "出口",
+    "leadTimes": "交货周期",
+    "orders": "订单",
+    "pricing": "价格",
+    "payment": "付款",
+    "technical": "技术信息",
+    "care": "保养与维护",
+    "business": "业务合作"
+  },
+  "faqPage": {
+    "searchPlaceholder": "搜索问题...",
+    "clearSearch": "清除搜索",
+    "allFilter": "全部",
+    "expandAll": "展开全部",
+    "collapseAll": "收起全部",
+    "noResults": "未找到与\"{query}\"相关的结果",
+    "ctaTitle": "没有找到您需要的答案？",
+    "ctaSubtitle": "我们的出口专家将很乐意为您提供帮助。",
+    "ctaPrimary": "索取报价",
+    "ctaSecondary": "联系我们的团队"
   }
 }

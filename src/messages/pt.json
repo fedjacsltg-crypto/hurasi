@@ -12,7 +12,8 @@
     "getInTouch": "Fale connosco",
     "skipToContent": "Ir para o conteúdo",
     "languageSwitcher": "Mudar de idioma",
-    "mainNavigation": "Navegação principal"
+    "mainNavigation": "Navegação principal",
+    "faq": "FAQ"
   },
   "hero": {
     "tagline": "Madeira Nobre. Valor Intemporal.",
@@ -236,5 +237,31 @@
   "sustainabilityPage": {
     "lifeCycleEyebrow": "Da Muda ao Embarque",
     "lifeCycleTitle": "O Ciclo de Vida Completo"
+  },
+  "faqCategories": {
+    "mahogany": "Sobre o Mogno Africano",
+    "products": "Produtos e Especificações",
+    "quality": "Controle de Qualidade",
+    "sustainability": "Sustentabilidade e FSC",
+    "export": "Exportação",
+    "leadTimes": "Prazos de Entrega",
+    "orders": "Pedidos",
+    "pricing": "Preços",
+    "payment": "Pagamento",
+    "technical": "Informações Técnicas",
+    "care": "Cuidados e Manutenção",
+    "business": "Relação Comercial"
+  },
+  "faqPage": {
+    "searchPlaceholder": "Pesquisar uma pergunta...",
+    "clearSearch": "Limpar pesquisa",
+    "allFilter": "Todos",
+    "expandAll": "Expandir tudo",
+    "collapseAll": "Recolher tudo",
+    "noResults": "Nenhum resultado encontrado para \"{query}\"",
+    "ctaTitle": "Não encontrou a resposta?",
+    "ctaSubtitle": "Nossos especialistas em exportação terão prazer em ajudá-lo.",
+    "ctaPrimary": "Solicitar Orçamento",
+    "ctaSecondary": "Fale com Nossa Equipe"
   }
 }

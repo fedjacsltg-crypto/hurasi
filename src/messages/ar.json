@@ -12,7 +12,8 @@
     "getInTouch": "تواصل معنا",
     "skipToContent": "الانتقال إلى المحتوى",
     "languageSwitcher": "تغيير اللغة",
-    "mainNavigation": "التنقل الرئيسي"
+    "mainNavigation": "التنقل الرئيسي",
+    "faq": "FAQ"
   },
   "hero": {
     "tagline": "خشب نبيل. قيمة خالدة.",
@@ -236,5 +237,31 @@
   "sustainabilityPage": {
     "lifeCycleEyebrow": "من الشتلة إلى الشحن",
     "lifeCycleTitle": "دورة الحياة الكاملة"
+  },
+  "faqCategories": {
+    "mahogany": "عن خشب الماهوجني الأفريقي",
+    "products": "المنتجات والمواصفات",
+    "quality": "مراقبة الجودة",
+    "sustainability": "الاستدامة وشهادة FSC",
+    "export": "التصدير",
+    "leadTimes": "مواعيد التسليم",
+    "orders": "الطلبات",
+    "pricing": "التسعير",
+    "payment": "الدفع",
+    "technical": "المعلومات التقنية",
+    "care": "العناية والصيانة",
+    "business": "العلاقة التجارية"
+  },
+  "faqPage": {
+    "searchPlaceholder": "ابحث عن سؤال...",
+    "clearSearch": "مسح البحث",
+    "allFilter": "الكل",
+    "expandAll": "توسيع الكل",
+    "collapseAll": "طي الكل",
+    "noResults": "لم يتم العثور على نتائج لـ \"{query}\"",
+    "ctaTitle": "لم تجد الإجابة؟",
+    "ctaSubtitle": "سيسعد أخصائيو التصدير لدينا بمساعدتكم.",
+    "ctaPrimary": "طلب عرض سعر",
+    "ctaSecondary": "تواصل مع فريقنا"
   }
 }
