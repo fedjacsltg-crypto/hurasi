@@ -277,7 +277,7 @@ export default async function ProductsPage({
       <section className="border-y border-pearl/10 bg-obsidian text-pearl">
         <RevealOnScroll className="mx-auto max-w-[1440px] px-6 py-14 sm:px-11 md:py-20">
           <h2 className="text-center font-display text-heading-l md:text-display-m">
-            Why Professionals Choose HURASI
+            {t("whyChooseTitle")}
           </h2>
           <ul className="mx-auto mt-10 grid max-w-[900px] grid-cols-2 gap-x-8 gap-y-4 md:grid-cols-3">
             {whyChooseList.map((item) => (
