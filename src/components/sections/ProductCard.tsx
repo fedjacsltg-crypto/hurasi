@@ -1,7 +1,7 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { Link } from "@/lib/i18n/navigation";
 import { cn } from "@/lib/utils/cn";
-import { quoteCta } from "@/lib/data/products";
 import type { Product } from "@/types/product";
 
 const TONE_CLASSES: Record<Product["placeholderTone"], string> = {
@@ -22,6 +22,7 @@ interface ProductCardProps {
  * dimensions ni de description marketing (Phase révisée, retour client).
  */
 export function ProductCard({ product, featured = false }: ProductCardProps) {
+  const t = useTranslations("products");
   return (
     <Link
       href={`/products/${product.slug}`}
@@ -47,7 +48,7 @@ export function ProductCard({ product, featured = false }: ProductCardProps) {
         <div className="absolute inset-x-0 top-0 z-10 flex items-start justify-between p-4">
           {product.badge && (
             <span className="text-caption uppercase tracking-[0.1em] text-pearl/90 [text-shadow:0_1px_3px_rgba(0,0,0,0.6)]">
-              {product.badge === "new" ? "New" : "Limited"}
+              {product.badge === "new" ? t("badgeNew") : t("badgeLimited")}
             </span>
           )}
           {product.fscCertified && (
@@ -61,7 +62,7 @@ export function ProductCard({ product, featured = false }: ProductCardProps) {
       <div className="mt-4">
         <p className="text-body-s text-fg/70">{product.species}</p>
         <span className="mt-2 inline-block border-b border-fg/20 pb-0.5 text-body-s group-hover:border-fg transition-colors">
-          {quoteCta}
+          {t("requestQuote")}
         </span>
       </div>
     </Link>

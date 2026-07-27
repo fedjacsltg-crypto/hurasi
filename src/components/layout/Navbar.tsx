@@ -43,7 +43,7 @@ export function Navbar() {
       )}
     >
       <nav
-        aria-label="Navigation principale"
+        aria-label={t("mainNavigation")}
         className="mx-auto flex max-w-[1440px] items-center justify-between px-6 sm:px-11"
       >
         <Link href="/" className="flex items-center gap-3">

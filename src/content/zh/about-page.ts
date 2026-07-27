@@ -1,3 +1,132 @@
-// TODO(traduction) : contenu long-form, fallback anglais en attendant
-// une traduction éditoriale humaine en zh.
-export * from "../en/about-page";
+import type { AboutSection } from "../en/about-page";
+
+export const aboutIntro = {
+  eyebrow: "关于HURASI",
+  title: "根植于责任，成就于卓越。",
+  lead: "卓越的木材从不是偶然的产物，而是负责任的林业管理、严谨的匠心工艺、精密的工业标准，以及对品质的长期承诺共同成就的结果。",
+  paragraphs: [
+    "在HURASI，我们的业务建立在一个简单的原则之上：每一块非洲红木，都应体现出自始至终塑造它的同样的用心与稳定标准。",
+    "从我们通过FSC认证的森林种植园，到通过FSC认证的锯木厂，我们以同一个目标管理生产流程的每一个关键环节——为世界上最挑剔的专业人士，提供符合其期望的优质非洲红木。",
+  ],
+  heroImage: "/images/about/header-plantation.jpg",
+};
+
+export const aboutSections: AboutSection[] = [
+  {
+    id: "integrated-partner",
+    title: "全面整合的木材合作伙伴",
+    paragraphs: [
+      "在当今全球木材行业中，稳定性始于掌控力。",
+      "通过同时管理林业运营与工业加工，HURASI打造出一套全面整合的生产模式，确保从森林到成品木材的可追溯性、品质与可靠性。",
+      "我们的专业能力贯穿整个价值链：",
+    ],
+    bullets: [
+      "森林种植园管理",
+      "负责任采伐",
+      "原木筛选",
+      "锯木作业",
+      "窑干处理",
+      "木材分级",
+      "精密加工",
+      "包装",
+      "出口物流",
+    ],
+    image: "/images/about/integrated-sawmill.jpg",
+    imageAlt: "HURASI车间内堆叠的红木锯材",
+  },
+  {
+    id: "philosophy",
+    title: "我们的理念",
+    paragraphs: [
+      "我们坚信，优质木材理应获得的不仅是高效生产，更是精心的管理。",
+      "从种植园规划到最终检验，每一项决策都以对材料的尊重、对环境的责任，以及对客户的承诺为指引。",
+      "我们不追求短期成果，而是投资于可持续林业实践、现代化工业流程，以及建立在信任基础上的长期合作关系。",
+      "因为木材真正的价值，不仅体现在其外观，更体现在它所激发的信任。",
+    ],
+  },
+  {
+    id: "mahogany-value",
+    title: "非洲红木的价值",
+    paragraphs: [
+      "非洲红木享有全球最受尊崇硬木树种之一的美誉。",
+      "其细腻的纹理、优异的尺寸稳定性、出色的加工性能以及天然的高雅气质，使其成为建筑、豪华室内设计、精品家具、定制细木工艺及高端制造领域的首选材料。",
+      "在HURASI，我们的使命是通过审慎的林业管理和精密的工业加工，保留并提升这些天然特质。",
+      "每一块离开我们工厂的木板，都体现着该树种的特质，以及其背后工艺流程的严谨性。",
+    ],
+    image: "/images/about/mahogany-value.jpg",
+    imageAlt: "新鲜切割的非洲红木原木，呈现出浓郁的天然色泽",
+  },
+  {
+    id: "sustainability",
+    title: "可持续发展——长期的承诺",
+    paragraphs: [
+      "负责任的林业管理，是我们一切工作的根本。",
+      "我们的运营建立在促进可持续资源管理、森林长期生产力，以及国际公认负责任生产标准的实践之上。",
+      "我们的种植园与锯木厂均通过FSC体系认证，体现了我们对整个生产链条的透明度、可追溯性和持续改进的承诺。",
+      "对我们的客户而言，这意味着一份保障：他们所获得的木材，来自经过独立核实标准支持的、负责任管理的来源。",
+    ],
+    image: "/images/about/sustainability-saplings.jpg",
+    imageAlt: "准备种植的红木幼苗",
+  },
+  {
+    id: "precision",
+    title: "贯穿每个环节的精准",
+    paragraphs: [
+      "木材的品质，取决于其整个历程中所做出的成千上万个决策。",
+    ],
+    bullets: [
+      "树种筛选",
+      "种植园管理",
+      "采伐规划",
+      "原木鉴定",
+      "锯切",
+      "干燥",
+      "分级",
+      "检验",
+      "包装",
+    ],
+    image: "/images/about/precision-logs.jpg",
+    imageAlt: "准备鉴定与锯切的红木原木",
+  },
+  {
+    id: "partnerships",
+    title: "为国际合作而生",
+    paragraphs: [
+      "我们的客户活跃于全球最具挑战性的行业之中：设计地标项目的建筑师、生产高端系列产品的家具制造商、打造永恒空间的室内设计专家、需要可靠原材料的工业加工商，以及服务全球市场的国际进口商。",
+      "尽管每位客户都有独特的技术需求，但他们都拥有同一个期望：对供应商的信任。",
+      "我们的使命，就是通过产品品质、透明沟通、可靠执行和长期承诺，赢得这份信任。",
+    ],
+    image: "/images/about/partnerships-founder.jpg",
+    imageAlt: "HURASI团队成员在种植园现场",
+  },
+  {
+    id: "more-than-supplier",
+    title: "不仅仅是供应商",
+    paragraphs: [
+      "我们将每一次发货视为一段关系的开始，而非一笔交易的结束。",
+      "成功的合作关系建立在稳定性、响应速度和相互信任之上。",
+      "通过将负责任的林业管理、工业专业能力与以客户为中心的理念相结合，HURASI致力于成为值得信赖的合作伙伴，让寻求优质非洲红木的企业，对其来源、品质和性能都拥有充分的信心。",
+    ],
+  },
+  {
+    id: "looking-forward",
+    title: "展望未来",
+    paragraphs: [
+      "在对可持续性、可追溯性和产品品质日益提高的期望推动下，全球木材行业仍在不断演进。",
+      "HURASI积极拥抱这一变化，持续加强林业实践、优化生产流程，并投资于长期的卓越运营。",
+      "随着市场变化和新挑战的出现，我们的承诺始终如一：提供负责任培育的非洲红木，坚持无可妥协的品质、可靠的供应，以及国际合作伙伴所期待的诚信。",
+    ],
+    image: "/images/about/looking-forward-seedling.jpg",
+    imageAlt: "种植园中生长的红木幼苗",
+  },
+];
+
+export const aboutClosing = {
+  title: "我们的承诺",
+  paragraphs: [
+    "从在我们森林中种下的第一株幼苗，到准备出口的最后一个集装箱，每一项决策都体现着同一个宗旨：通过负责任的林业管理、精密的生产工艺和值得信赖的合作关系，创造持久的价值。",
+    "因为卓越的木材，理应获得卓越的守护。",
+  ],
+  image: "/images/about/closing-team.jpg",
+  imageAlt: "HURASI团队成员漫步于红木种植园",
+};

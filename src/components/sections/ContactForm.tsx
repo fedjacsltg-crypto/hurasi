@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
 import {
   COUNTRY_OPTIONS,
@@ -16,6 +17,11 @@ const labelClass = "text-caption uppercase tracking-[0.08em] text-fg/50";
 type Status = "idle" | "submitting" | "success" | "error";
 
 export function ContactForm() {
+  const t = useTranslations("contactForm");
+  const tOptions = useTranslations("quoteOptions");
+  const industryLabels = Object.fromEntries(
+    Object.keys(tOptions.raw("industry")).map((k) => [k, tOptions(`industry.${k}`)])
+  );
   const [status, setStatus] = useState<Status>("idle");
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -51,10 +57,10 @@ export function ContactForm() {
         animate={{ opacity: 1, y: 0 }}
         className="py-16 text-center"
       >
-        <p className="text-caption uppercase tracking-[0.12em] text-accent">Thank You</p>
-        <h3 className="mt-4 font-display text-heading-l">Your message has been sent.</h3>
+        <p className="text-caption uppercase tracking-[0.12em] text-accent">{t("thankYouTitle")}</p>
+        <h3 className="mt-4 font-display text-heading-l">{t("successTitle")}</h3>
         <p className="mt-4 text-body-m text-fg/70">
-          Our team will get back to you as soon as possible.
+          {t("successBody")}
         </p>
       </motion.div>
     );
@@ -72,25 +78,30 @@ export function ContactForm() {
       />
 
       <div className="grid gap-6 sm:grid-cols-2">
-        <Field label="Full Name *" name="fullName" required />
-        <Field label="Company *" name="company" required />
-        <Field label="Position" name="position" />
-        <SelectField label="Country *" name="country" options={COUNTRY_OPTIONS} required />
-        <Field label="City" name="city" />
-        <Field label="Phone Number" name="phone" type="tel" dir="ltr" />
-        <Field label="Business Email *" name="email" type="email" required />
+        <Field label={t("fullName")} name="fullName" required />
+        <Field label={t("company")} name="company" required />
+        <Field label={t("position")} name="position" />
+        <SelectField label={t("country")} name="country" options={COUNTRY_OPTIONS} required />
+        <Field label={t("city")} name="city" />
+        <Field label={t("phoneNumber")} name="phone" type="tel" dir="ltr" />
+        <Field label={t("businessEmail")} name="email" type="email" required />
         <SelectField
-          label="Preferred Language"
+          label={t("preferredLanguage")}
           name="preferredLanguage"
           options={PREFERRED_LANGUAGE_OPTIONS}
         />
-        <SelectField label="Industry" name="industry" options={INDUSTRY_OPTIONS} />
-        <Field label="Subject *" name="subject" required />
+        <SelectField
+          label={t("industry")}
+          name="industry"
+          options={INDUSTRY_OPTIONS}
+          optionLabels={industryLabels}
+        />
+        <Field label={t("subject")} name="subject" required />
       </div>
 
       <div>
         <label className={labelClass} htmlFor="message">
-          Message *
+          {t("message")}
         </label>
         <textarea
           id="message"
@@ -110,18 +121,18 @@ export function ContactForm() {
           className="mt-1 h-4 w-4 accent-current"
         />
         <label htmlFor="privacyAccepted" className="text-body-s text-fg/60">
-          I agree to the Privacy Policy.
+          {t("privacyConsent")}
         </label>
       </div>
 
       {status === "error" && (
         <p className="text-body-s text-[color:var(--color-state-error)]">
-          Something went wrong. Please try again.
+          {t("errorMessage")}
         </p>
       )}
 
       <Button type="submit" variant="primary" disabled={status === "submitting"}>
-        {status === "submitting" ? "Sending…" : "Send Message"}
+        {status === "submitting" ? t("sending") : t("submit")}
       </Button>
     </form>
   );
@@ -162,11 +173,13 @@ function SelectField({
   name,
   options,
   required,
+  optionLabels,
 }: {
   label: string;
   name: string;
   options: string[];
   required?: boolean;
+  optionLabels?: Record<string, string>;
 }) {
   return (
     <div>
@@ -183,7 +196,7 @@ function SelectField({
         <option value="" style={{ backgroundColor: "#0a0a0a", color: "#fafaf8" }}></option>
         {options.map((o) => (
           <option key={o} value={o} style={{ backgroundColor: "#0a0a0a", color: "#fafaf8" }}>
-            {o}
+            {optionLabels?.[o] ?? o}
           </option>
         ))}
       </select>

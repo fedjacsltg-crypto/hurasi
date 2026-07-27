@@ -1,12 +1,11 @@
 import Image from "next/image";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import { getProductsPageContent } from "@/lib/content/products-page";
 import { RevealOnScroll } from "@/components/motion/RevealOnScroll";
 import { Button } from "@/components/ui/Button";
 import { ProductCard } from "@/components/sections/ProductCard";
 import {
   featuredProducts,
-  parquetCapabilityStatement,
   parquetFinishDetails,
 } from "@/lib/data/products";
 import type { Locale } from "@/lib/i18n/config";
@@ -18,6 +17,7 @@ export default async function ProductsPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations("products");
   const {
     productsIntro,
     materialSection,
@@ -135,13 +135,13 @@ export default async function ProductsPage({
         <div className="mx-auto max-w-[1440px] px-6 py-14 sm:px-11 md:py-24">
           <RevealOnScroll className="mb-11 max-w-[720px] md:mb-14">
             <p className="text-caption uppercase tracking-[0.12em] text-accent">
-              {parquetCapabilityStatement.eyebrow}
+              {t("capabilityEyebrow")}
             </p>
             <h2 className="mt-4 font-display text-heading-l md:text-display-m">
-              {parquetCapabilityStatement.title}
+              {t("capabilityTitle")}
             </h2>
             <p className="mt-4 text-body-m text-fg/60">
-              {parquetCapabilityStatement.description}
+              {t("capabilityDescription")}
             </p>
           </RevealOnScroll>
 
@@ -156,7 +156,7 @@ export default async function ProductsPage({
           {/* Finish details — reinforces the "any finish" promise */}
           <RevealOnScroll delay={0.2} className="mt-14">
             <p className="mb-5 text-caption uppercase tracking-[0.1em] text-fg/50">
-              Finishes & Joints
+              {t("finishesAndJoints")}
             </p>
             <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
               {parquetFinishDetails.map((item) => (

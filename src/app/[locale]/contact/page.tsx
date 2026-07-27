@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import { RevealOnScroll } from "@/components/motion/RevealOnScroll";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { QuoteForm } from "@/components/sections/QuoteForm";
@@ -16,6 +16,7 @@ export default async function ContactPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations("contactPage");
 
   return (
     <>
@@ -27,12 +28,10 @@ export default async function ContactPage({
         />
         <RevealOnScroll className="relative z-10 mx-auto max-w-[760px] px-6 text-center">
           <h1 className="font-display text-display-m md:text-display-l">
-            Let&apos;s Build Something Exceptional Together
+            {t("heroTitle")}
           </h1>
           <p className="mx-auto mt-6 max-w-[56ch] text-body-l text-pearl/80">
-            Whether you are sourcing premium African Mahogany, planning a large
-            project, or looking for a long-term manufacturing partner, our team
-            is ready to assist you.
+            {t("heroSubtitle")}
           </p>
         </RevealOnScroll>
       </section>
@@ -41,10 +40,10 @@ export default async function ContactPage({
       <section className="mx-auto max-w-[900px] px-6 py-14 sm:px-11 md:py-24">
         <RevealOnScroll>
           <p className="text-caption uppercase tracking-[0.12em] text-accent">
-            Get in Touch
+            {t("getInTouch")}
           </p>
           <h2 className="mt-4 font-display text-heading-l md:text-display-m">
-            Send Us a Message
+            {t("sendUsMessage")}
           </h2>
         </RevealOnScroll>
         <RevealOnScroll delay={0.1} className="mt-11">
@@ -57,15 +56,13 @@ export default async function ContactPage({
         <div className="mx-auto max-w-[900px] px-6 py-14 sm:px-11 md:py-24">
           <RevealOnScroll>
             <p className="text-caption uppercase tracking-[0.12em] text-accent">
-              Request a Quotation
+              {t("requestQuotation")}
             </p>
             <h2 className="mt-4 font-display text-heading-l md:text-display-m">
-              Tell Us Exactly What You Need
+              {t("tellUsWhatYouNeed")}
             </h2>
             <p className="mt-4 max-w-[60ch] text-body-m text-fg/60">
-              Specify your dimensions, grade, finish, and destination — our
-              automatic estimator will calculate volume, weight, and container
-              fit in real time as you type.
+              {t("quoteIntro")}
             </p>
           </RevealOnScroll>
           <RevealOnScroll delay={0.1} className="mt-11">

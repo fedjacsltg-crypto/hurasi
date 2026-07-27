@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
 import { estimateContainer } from "@/lib/quote/container-calculator";
 import {
@@ -33,6 +34,23 @@ const labelClass = "text-caption uppercase tracking-[0.08em] text-fg/50";
 type Status = "idle" | "submitting" | "success" | "error";
 
 export function QuoteForm() {
+  const t = useTranslations("quoteForm");
+  const tOptions = useTranslations("quoteOptions");
+  const productTypeLabels = Object.fromEntries(
+    Object.keys(tOptions.raw("productType")).map((k) => [k, tOptions(`productType.${k}`)])
+  );
+  const moistureLabels = Object.fromEntries(
+    Object.keys(tOptions.raw("moisture")).map((k) => [k, tOptions(`moisture.${k}`)])
+  );
+  const surfaceFinishLabels = Object.fromEntries(
+    Object.keys(tOptions.raw("surfaceFinish")).map((k) => [k, tOptions(`surfaceFinish.${k}`)])
+  );
+  const machiningLabels = Object.fromEntries(
+    Object.keys(tOptions.raw("machining")).map((k) => [k, tOptions(`machining.${k}`)])
+  );
+  const packagingLabels = Object.fromEntries(
+    Object.keys(tOptions.raw("packaging")).map((k) => [k, tOptions(`packaging.${k}`)])
+  );
   const searchParams = useSearchParams();
   const galleryApplication = searchParams.get("application");
   const galleryPrefill = galleryApplication
@@ -129,16 +147,16 @@ export function QuoteForm() {
         animate={{ opacity: 1, y: 0 }}
         className="mx-auto max-w-[560px] py-24 text-center"
       >
-        <p className="text-caption uppercase tracking-[0.12em] text-accent">Thank You</p>
+        <p className="text-caption uppercase tracking-[0.12em] text-accent">{t("thankYouTitle")}</p>
         <h3 className="mt-4 font-display text-heading-l">
-          Your quotation request has been successfully received.
+          {t("successTitle")}
         </h3>
         <p className="mt-4 text-body-m text-fg/70">
-          Our export department will review your request and respond as soon as possible.
+          {t("successBody")}
         </p>
         {referenceNumber && (
           <p className="mt-6 tabular-nums text-caption uppercase tracking-[0.1em] text-fg/50">
-            Reference: {referenceNumber}
+            {t("referenceLabel")}: {referenceNumber}
           </p>
         )}
       </motion.div>
@@ -159,15 +177,15 @@ export function QuoteForm() {
 
       {/* Customer Information */}
       <fieldset>
-        <legend className="mb-6 font-display text-heading-m">Customer Information</legend>
+        <legend className="mb-6 font-display text-heading-m">{t("sectionCustomerInfo")}</legend>
         <div className="grid gap-6 sm:grid-cols-2">
-          <Field label="Company *" name="company" required />
-          <SelectField label="Country *" name="country" options={COUNTRY_OPTIONS} required />
-          <Field label="Contact Person *" name="contactPerson" required />
-          <Field label="Business Email *" name="email" type="email" required />
-          <Field label="Phone Number" name="phone" type="tel" dir="ltr" />
+          <Field label={t("company")} name="company" required />
+          <SelectField label={t("country")} name="country" options={COUNTRY_OPTIONS} required />
+          <Field label={t("contactPerson")} name="contactPerson" required />
+          <Field label={t("businessEmail")} name="email" type="email" required />
+          <Field label={t("phoneNumber")} name="phone" type="tel" dir="ltr" />
           <SelectField
-            label="Preferred Language"
+            label={t("preferredLanguage")}
             name="preferredLanguage"
             options={PREFERRED_LANGUAGE_OPTIONS}
           />
@@ -176,52 +194,61 @@ export function QuoteForm() {
 
       {/* Product */}
       <fieldset>
-        <legend className="mb-6 font-display text-heading-m">Product</legend>
-        <SelectField label="Product Type *" name="productType" options={PRODUCT_TYPE_OPTIONS} required />
+        <legend className="mb-6 font-display text-heading-m">{t("sectionProduct")}</legend>
+        <SelectField
+          label={t("productType")}
+          name="productType"
+          options={PRODUCT_TYPE_OPTIONS}
+          optionLabels={productTypeLabels}
+          required
+        />
       </fieldset>
 
       {/* Wood Specifications */}
       <fieldset>
-        <legend className="mb-6 font-display text-heading-m">Wood Specifications</legend>
+        <legend className="mb-6 font-display text-heading-m">{t("sectionWoodSpecs")}</legend>
         <div className="grid gap-6 sm:grid-cols-3">
           <div>
-            <p className={labelClass}>Species</p>
+            <p className={labelClass}>{t("species")}</p>
             <p className="mt-2 border-b border-fg/10 py-2 text-body-m text-fg/70">
               African Mahogany (Khaya)
             </p>
           </div>
-          <SelectField label="Grade" name="grade" options={GRADE_OPTIONS} />
-          <SelectField label="Moisture Content" name="moistureContent" options={MOISTURE_OPTIONS} />
+          <SelectField label={t("grade")} name="grade" options={GRADE_OPTIONS} />
+          <SelectField
+            label={t("moistureContent")}
+            name="moistureContent"
+            options={MOISTURE_OPTIONS}
+            optionLabels={moistureLabels}
+          />
         </div>
       </fieldset>
 
       {/* Dimensions + live calculator */}
       <fieldset>
-        <legend className="mb-2 font-display text-heading-m">Dimensions</legend>
-        <p className="mb-6 text-body-s text-fg/50">
-          Add one row per size — thickness × width × length, with quantity.
-        </p>
+        <legend className="mb-2 font-display text-heading-m">{t("sectionDimensions")}</legend>
+        <p className="mb-6 text-body-s text-fg/50">{t("dimensionsHint")}</p>
 
         <div className="space-y-4">
           {dimensions.map((row) => (
             <div key={row.id} className="grid grid-cols-2 gap-4 sm:grid-cols-5 sm:items-end">
               <NumberField
-                label="Thickness (mm)"
+                label={t("thickness")}
                 value={row.thickness}
                 onChange={(v) => updateRow(row.id, "thickness", v)}
               />
               <NumberField
-                label="Width (mm)"
+                label={t("width")}
                 value={row.width}
                 onChange={(v) => updateRow(row.id, "width", v)}
               />
               <NumberField
-                label="Length (mm)"
+                label={t("length")}
                 value={row.length}
                 onChange={(v) => updateRow(row.id, "length", v)}
               />
               <NumberField
-                label="Quantity (pcs)"
+                label={t("quantity")}
                 value={row.quantity}
                 onChange={(v) => updateRow(row.id, "quantity", v)}
               />
@@ -230,7 +257,7 @@ export function QuoteForm() {
                 onClick={() => removeRow(row.id)}
                 className="justify-self-start border-b border-fg/20 pb-2 text-body-s text-fg/50 hover:border-fg hover:text-fg transition-colors sm:justify-self-auto"
               >
-                Remove
+                {t("remove")}
               </button>
             </div>
           ))}
@@ -241,7 +268,7 @@ export function QuoteForm() {
           onClick={addRow}
           className="mt-6 border-b border-fg/20 pb-1 text-body-s hover:border-fg transition-colors"
         >
-          + Add another dimension
+          {t("addDimension")}
         </button>
 
         {/* Estimateur automatique de conteneur — fonctionnalité différenciante */}
@@ -254,14 +281,14 @@ export function QuoteForm() {
               className="mt-8 border border-accent/30 bg-accent/5 p-6"
             >
               <p className="text-caption uppercase tracking-[0.1em] text-accent">
-                Automatic Container Estimate
+                {t("containerEstimateTitle")}
               </p>
               <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-4">
-                <Stat label="Total Volume" value={`${estimate.totalVolumeM3} m³`} />
-                <Stat label="Est. Weight" value={`${estimate.estimatedWeightKg.toLocaleString()} kg`} />
-                <Stat label="Total Pieces" value={estimate.totalPieces.toLocaleString()} />
+                <Stat label={t("totalVolume")} value={`${estimate.totalVolumeM3} m³`} />
+                <Stat label={t("estWeight")} value={`${estimate.estimatedWeightKg.toLocaleString()} kg`} />
+                <Stat label={t("totalPieces")} value={estimate.totalPieces.toLocaleString()} />
                 <Stat
-                  label="Best Fit"
+                  label={t("bestFit")}
                   value={
                     estimate.bestFit
                       ? estimate.bestFit.type === "multiple-40hc"
@@ -273,9 +300,7 @@ export function QuoteForm() {
               </div>
               {estimate.bestFit && (
                 <p className="mt-4 text-body-s text-fg/60">
-                  Estimated fill rate: {estimate.bestFit.fillRate}%. This is an approximate
-                  estimate for planning purposes and does not account for actual stacking
-                  or dunnage — final loading is confirmed by our export team.
+                  {t("fillRateNote", { rate: estimate.bestFit.fillRate })}
                 </p>
               )}
             </motion.div>
@@ -285,13 +310,18 @@ export function QuoteForm() {
 
       {/* Surface Finish */}
       <fieldset>
-        <legend className="mb-6 font-display text-heading-m">Surface Finish</legend>
-        <SelectField label="Finish" name="surfaceFinish" options={SURFACE_FINISH_OPTIONS} />
+        <legend className="mb-6 font-display text-heading-m">{t("sectionSurfaceFinish")}</legend>
+        <SelectField
+          label={t("finish")}
+          name="surfaceFinish"
+          options={SURFACE_FINISH_OPTIONS}
+          optionLabels={surfaceFinishLabels}
+        />
       </fieldset>
 
       {/* Machining Options */}
       <fieldset>
-        <legend className="mb-6 font-display text-heading-m">Machining Options</legend>
+        <legend className="mb-6 font-display text-heading-m">{t("sectionMachining")}</legend>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
           {MACHINING_OPTIONS.map((option) => (
             <label key={option} className="flex items-center gap-2 text-body-s text-fg/70">
@@ -301,7 +331,7 @@ export function QuoteForm() {
                 onChange={() => toggleMachining(option)}
                 className="h-4 w-4 accent-current"
               />
-              {option}
+              {machiningLabels[option] ?? option}
             </label>
           ))}
         </div>
@@ -309,37 +339,40 @@ export function QuoteForm() {
 
       {/* Packaging */}
       <fieldset>
-        <legend className="mb-6 font-display text-heading-m">Packaging</legend>
-        <SelectField label="Packaging" name="packaging" options={PACKAGING_OPTIONS} />
+        <legend className="mb-6 font-display text-heading-m">{t("sectionPackaging")}</legend>
+        <SelectField
+          label={t("packaging")}
+          name="packaging"
+          options={PACKAGING_OPTIONS}
+          optionLabels={packagingLabels}
+        />
       </fieldset>
 
       {/* Volume */}
       <fieldset>
-        <legend className="mb-6 font-display text-heading-m">Volume</legend>
+        <legend className="mb-6 font-display text-heading-m">{t("sectionVolume")}</legend>
         <div className="grid gap-6 sm:grid-cols-3">
-          <Field label="Quantity (pieces or m³)" name="quantityValue" />
-          <Field label="Monthly Demand" name="monthlyDemand" />
-          <Field label="Annual Demand" name="annualDemand" />
+          <Field label={t("quantityPiecesM3")} name="quantityValue" />
+          <Field label={t("monthlyDemand")} name="monthlyDemand" />
+          <Field label={t("annualDemand")} name="annualDemand" />
         </div>
       </fieldset>
 
       {/* Destination */}
       <fieldset>
-        <legend className="mb-6 font-display text-heading-m">Destination</legend>
+        <legend className="mb-6 font-display text-heading-m">{t("sectionDestination")}</legend>
         <div className="grid gap-6 sm:grid-cols-2">
-          <SelectField label="Destination Country" name="destinationCountry" options={COUNTRY_OPTIONS} />
-          <Field label="Final Port" name="finalPort" />
-          <SelectField label="Incoterm" name="incoterm" options={INCOTERM_OPTIONS} />
-          <Field label="Desired Delivery Date" name="deliveryDate" type="date" />
+          <SelectField label={t("destinationCountry")} name="destinationCountry" options={COUNTRY_OPTIONS} />
+          <Field label={t("finalPort")} name="finalPort" />
+          <SelectField label={t("incoterm")} name="incoterm" options={INCOTERM_OPTIONS} />
+          <Field label={t("deliveryDate")} name="deliveryDate" type="date" />
         </div>
       </fieldset>
 
       {/* Attachments — UI ready, upload backend to be connected (see note to client) */}
       <fieldset>
-        <legend className="mb-2 font-display text-heading-m">Attachments</legend>
-        <p className="mb-4 text-body-s text-fg/50">
-          PDF, DWG, DXF, images or technical drawings — max 50 MB.
-        </p>
+        <legend className="mb-2 font-display text-heading-m">{t("sectionAttachments")}</legend>
+        <p className="mb-4 text-body-s text-fg/50">{t("attachmentsHint")}</p>
         <input
           type="file"
           multiple
@@ -351,7 +384,7 @@ export function QuoteForm() {
       {/* Comments */}
       <fieldset>
         <label className={labelClass} htmlFor="comments">
-          Additional Comments
+          {t("additionalComments")}
         </label>
         <textarea
           id="comments"
@@ -371,19 +404,18 @@ export function QuoteForm() {
           className="mt-1 h-4 w-4 accent-current"
         />
         <label htmlFor="privacyAccepted" className="text-body-s text-fg/60">
-          I agree to the Privacy Policy and consent to HURASI processing my data to
-          respond to this request.
+          {t("privacyConsent")}
         </label>
       </div>
 
       {status === "error" && (
         <p className="text-body-s text-[color:var(--color-state-error)]">
-          Something went wrong. Please try again or contact us directly.
+          {t("errorMessage")}
         </p>
       )}
 
       <Button type="submit" variant="primary" disabled={status === "submitting"}>
-        {status === "submitting" ? "Sending…" : "Request My Quotation"}
+        {status === "submitting" ? t("sending") : t("submit")}
       </Button>
     </form>
   );
@@ -448,11 +480,15 @@ function SelectField({
   name,
   options,
   required,
+  optionLabels,
 }: {
   label: string;
   name: string;
   options: string[];
   required?: boolean;
+  /** Libellés traduits affichés à l'écran — la valeur soumise (name=)
+   *  reste toujours la chaîne anglaise canonique d'origine. */
+  optionLabels?: Record<string, string>;
 }) {
   return (
     <div>
@@ -469,7 +505,7 @@ function SelectField({
         <option value="" style={{ backgroundColor: "#0a0a0a", color: "#fafaf8" }}></option>
         {options.map((o) => (
           <option key={o} value={o} style={{ backgroundColor: "#0a0a0a", color: "#fafaf8" }}>
-            {o}
+            {optionLabels?.[o] ?? o}
           </option>
         ))}
       </select>

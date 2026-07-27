@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import { getSustainabilityPageContent } from "@/lib/content/sustainability-page";
 import { RevealOnScroll } from "@/components/motion/RevealOnScroll";
 import { Button } from "@/components/ui/Button";
@@ -68,6 +68,7 @@ export default async function SustainabilityPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations("sustainabilityPage");
   const {
     sustainabilityIntro,
     philosophySection,
@@ -119,10 +120,10 @@ export default async function SustainabilityPage({
         <div className="mx-auto max-w-[1440px] px-6 py-14 sm:px-11 md:py-24">
           <RevealOnScroll className="mx-auto mb-14 max-w-[760px] text-center">
             <p className="text-caption uppercase tracking-[0.12em] text-accent">
-              From Seedling to Shipment
+              {t("lifeCycleEyebrow")}
             </p>
             <h2 className="mt-4 font-display text-heading-l md:text-display-m">
-              The Complete Life Cycle
+              {t("lifeCycleTitle")}
             </h2>
           </RevealOnScroll>
 

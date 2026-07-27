@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { Link } from "@/lib/i18n/navigation";
 import { cn } from "@/lib/utils/cn";
 import { GALLERY_CATEGORIES } from "@/lib/gallery/categories";
@@ -13,6 +14,8 @@ interface GalleryGridProps {
 }
 
 export function GalleryGrid({ items }: GalleryGridProps) {
+  const t = useTranslations("gallery");
+  const tCategories = useTranslations("galleryCategories");
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
@@ -61,7 +64,7 @@ export function GalleryGrid({ items }: GalleryGridProps) {
               : "border-border text-fg/60 hover:border-fg/40"
           )}
         >
-          All
+          {t("allFilter")}
         </button>
         {availableCategories.map((cat) => (
           <button
@@ -74,7 +77,7 @@ export function GalleryGrid({ items }: GalleryGridProps) {
                 : "border-border text-fg/60 hover:border-fg/40"
             )}
           >
-            {cat.icon} {cat.label}
+            {cat.icon} {tCategories(cat.id)}
           </button>
         ))}
       </div>
@@ -118,7 +121,7 @@ export function GalleryGrid({ items }: GalleryGridProps) {
           >
             <button
               onClick={close}
-              aria-label="Close"
+              aria-label={t("close")}
               className="absolute right-4 top-4 text-body-l text-pearl/70 hover:text-pearl sm:right-8 sm:top-8"
             >
               ✕
@@ -128,7 +131,7 @@ export function GalleryGrid({ items }: GalleryGridProps) {
                 e.stopPropagation();
                 prev();
               }}
-              aria-label="Previous"
+              aria-label={t("previous")}
               className="absolute left-2 top-1/2 -translate-y-1/2 px-3 text-heading-l text-pearl/50 hover:text-pearl sm:left-6"
             >
               ‹
@@ -138,7 +141,7 @@ export function GalleryGrid({ items }: GalleryGridProps) {
                 e.stopPropagation();
                 next();
               }}
-              aria-label="Next"
+              aria-label={t("next")}
               className="absolute right-2 top-1/2 -translate-y-1/2 px-3 text-heading-l text-pearl/50 hover:text-pearl sm:right-6"
             >
               ›
@@ -161,19 +164,19 @@ export function GalleryGrid({ items }: GalleryGridProps) {
 
               <div className="text-pearl">
                 <p className="text-caption uppercase tracking-[0.1em] text-accent-light">
-                  {GALLERY_CATEGORIES.find((c) => c.id === activeItem.category)?.label}
+                  {tCategories(activeItem.category)}
                 </p>
                 <h2 className="mt-3 font-display text-heading-l">
                   {activeItem.application}
                 </h2>
 
                 <dl className="mt-8 space-y-4 text-body-s">
-                  <MetaRow label="Species" value={activeItem.species} />
-                  <MetaRow label="Finish" value={activeItem.finish} />
-                  <MetaRow label="Setting" value={activeItem.setting} />
-                  <MetaRow label="Common Dimensions" value={activeItem.commonDimensions} />
-                  <MetaRow label="Durability" value={activeItem.durability} />
-                  <MetaRow label="Moisture Resistance" value={activeItem.moistureResistance} />
+                  <MetaRow label={t("species")} value={activeItem.species} />
+                  <MetaRow label={t("finish")} value={activeItem.finish} />
+                  <MetaRow label={t("setting")} value={activeItem.setting} />
+                  <MetaRow label={t("commonDimensions")} value={activeItem.commonDimensions} />
+                  <MetaRow label={t("durability")} value={activeItem.durability} />
+                  <MetaRow label={t("moistureResistance")} value={activeItem.moistureResistance} />
                 </dl>
 
                 <Link
@@ -186,7 +189,7 @@ export function GalleryGrid({ items }: GalleryGridProps) {
                   }}
                   className="mt-8 inline-block border-b border-accent pb-1 text-body-m text-accent hover:border-pearl hover:text-pearl transition-colors"
                 >
-                  Request a Quotation for This Application →
+                  {t("requestQuoteForApplication")}
                 </Link>
               </div>
             </motion.div>

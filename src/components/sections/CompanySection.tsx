@@ -3,6 +3,7 @@ import { RevealOnScroll } from "@/components/motion/RevealOnScroll";
 
 export async function CompanySection() {
   const t = await getTranslations("nav");
+  const tCompany = await getTranslations("companySection");
 
   return (
     <section className="relative overflow-hidden py-14 md:py-28">
@@ -20,20 +21,15 @@ export async function CompanySection() {
           </p>
 
           <h2 className="mt-5 font-display text-heading-l md:text-display-m">
-            Grown with patience. Built to last generations.
+            {tCompany("title")}
           </h2>
 
           <p className="mt-9 text-body-l text-fg/70">
-            Every board we deliver reflects decades of forestry investment,
-            not a single harvest. We do not chase speed — we cultivate African
-            Mahogany that meets the standards of the world&apos;s most
-            demanding professionals.
+            {tCompany("paragraph1")}
           </p>
 
           <p className="mt-6 text-body-l text-fg/70">
-            This discipline comes from a fully integrated model: our own
-            FSC-certified plantations, our own FSC-certified sawmill, and
-            complete traceability from seedling to shipment.
+            {tCompany("paragraph2")}
           </p>
         </RevealOnScroll>
       </div>
