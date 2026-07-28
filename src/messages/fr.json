@@ -14,7 +14,9 @@
     "languageSwitcher": "Changer de langue",
     "mainNavigation": "Navigation principale",
     "faq": "FAQ",
-    "blog": "Blog"
+    "blog": "Blog",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu"
   },
   "hero": {
     "tagline": "Bois Noble. Valeur Intemporelle.",

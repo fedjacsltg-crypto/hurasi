@@ -14,7 +14,9 @@
     "languageSwitcher": "تغيير اللغة",
     "mainNavigation": "التنقل الرئيسي",
     "faq": "FAQ",
-    "blog": "المدونة"
+    "blog": "المدونة",
+    "openMenu": "فتح القائمة",
+    "closeMenu": "إغلاق القائمة"
   },
   "hero": {
     "tagline": "خشب نبيل. قيمة خالدة.",

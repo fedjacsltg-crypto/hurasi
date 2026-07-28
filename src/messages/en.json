@@ -14,7 +14,9 @@
     "getInTouch": "Get in Touch",
     "skipToContent": "Skip to content",
     "languageSwitcher": "Change language",
-    "mainNavigation": "Main navigation"
+    "mainNavigation": "Main navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
   },
   "hero": {
     "tagline": "Noble Wood. Timeless Value.",

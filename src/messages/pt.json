@@ -14,7 +14,9 @@
     "languageSwitcher": "Mudar de idioma",
     "mainNavigation": "Navegação principal",
     "faq": "FAQ",
-    "blog": "Blog"
+    "blog": "Blog",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu"
   },
   "hero": {
     "tagline": "Madeira Nobre. Valor Intemporal.",

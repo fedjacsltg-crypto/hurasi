@@ -14,7 +14,9 @@
     "languageSwitcher": "切换语言",
     "mainNavigation": "主导航",
     "faq": "FAQ",
-    "blog": "博客"
+    "blog": "博客",
+    "openMenu": "打开菜单",
+    "closeMenu": "关闭菜单"
   },
   "hero": {
     "tagline": "尊贵之木,恒久价值。",
