@@ -29,8 +29,8 @@ export const articles: BlogArticle[] = [
       "Ce que les acheteurs, architectes et fabricants doivent comprendre avant de spécifier de l'acajou africain pour un projet.",
     authorId: "hurasi-desk",
     publishedDate: "2026-06-15",
-    heroImage: "/images/forests/rough-sawn-slabs.jpg",
-    heroImageAlt: "Plateaux d'acajou africain fraîchement sciés révélant un fil naturel riche",
+    heroImage: "/images/blog/board-inspection-detail.jpg",
+    heroImageAlt: "Gros plan sur une main inspectant le fil naturel d'une planche d'acajou fraîchement sciée",
     excerpt:
       "De l'origine botanique à la documentation export, un panorama pratique de ce qui fait de l'acajou africain l'un des bois durs les plus respectés au monde — et comment le spécifier avec assurance.",
     difficulty: "intermediate",
@@ -140,8 +140,8 @@ export const articles: BlogArticle[] = [
       "Comment la sylviculture contrôlée transforme la façon dont architectes et designers s'approvisionnent en bois dur premium pour les projets haut de gamme.",
     authorId: "hurasi-desk",
     publishedDate: "2026-06-29",
-    heroImage: "/images/forests/seedling.jpg",
-    heroImageAlt: "Jeune plant d'acajou poussant en rang de pépinière",
+    heroImage: "/images/blog/plantation-forest-walk.jpg",
+    heroImageAlt: "Une collaboratrice HURASI parmi des acajous matures sur la plantation",
     excerpt:
       "Design de luxe et approvisionnement responsable ne sont plus des priorités concurrentes. Voici pourquoi l'acajou africain de plantation devient la spécification standard des architectes soucieux des deux.",
     difficulty: "beginner",

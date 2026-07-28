@@ -27,8 +27,8 @@ export const articles: BlogArticle[] = [
     subtitle: "ما يحتاج المشترون والمهندسون المعماريون والمصنّعون إلى فهمه قبل تحديد خشب الماهوجني الأفريقي في مشروعهم.",
     authorId: "hurasi-desk",
     publishedDate: "2026-06-15",
-    heroImage: "/images/forests/rough-sawn-slabs.jpg",
-    heroImageAlt: "ألواح ماهوجني أفريقي منشورة حديثًا تُظهر حبيبات طبيعية غنية",
+    heroImage: "/images/blog/board-inspection-detail.jpg",
+    heroImageAlt: "لقطة مقربة ليد تتفحص الحبيبات الطبيعية للوح ماهوجني منشور حديثًا",
     excerpt:
       "من المنشأ النباتي إلى وثائق التصدير، نظرة عملية على ما يجعل خشب الماهوجني الأفريقي واحدًا من أكثر أنواع الأخشاب الصلبة احترامًا في العالم — وكيفية تحديد مواصفاته بثقة.",
     difficulty: "intermediate",
@@ -137,8 +137,8 @@ export const articles: BlogArticle[] = [
     subtitle: "كيف تعيد الحراجة الخاضعة للرقابة تشكيل الطريقة التي يشتري بها المهندسون المعماريون والمصممون الخشب الصلب الفاخر للمشاريع الراقية.",
     authorId: "hurasi-desk",
     publishedDate: "2026-06-29",
-    heroImage: "/images/forests/seedling.jpg",
-    heroImageAlt: "شتلة ماهوجني صغيرة تنمو في صف بالمشتل",
+    heroImage: "/images/blog/plantation-forest-walk.jpg",
+    heroImageAlt: "إحدى موظفات HURASI وسط أشجار ماهوجني ناضجة في المزرعة",
     excerpt:
       "لم يعد التصميم الفاخر والتوريد المسؤول أولويتين متنافستين. إليكم لماذا يصبح خشب الماهوجني الأفريقي المزروع في مزارع المواصفة القياسية للمهندسين المعماريين المهتمين بكليهما.",
     difficulty: "beginner",

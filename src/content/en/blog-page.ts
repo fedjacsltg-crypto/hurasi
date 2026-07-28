@@ -29,8 +29,8 @@ export const articles: BlogArticle[] = [
       "What buyers, architects, and manufacturers need to understand before specifying African Mahogany for a project.",
     authorId: "hurasi-desk",
     publishedDate: "2026-06-15",
-    heroImage: "/images/forests/rough-sawn-slabs.jpg",
-    heroImageAlt: "Freshly sawn African Mahogany slabs showing rich natural grain",
+    heroImage: "/images/blog/board-inspection-detail.jpg",
+    heroImageAlt: "Close-up of a hand inspecting the natural grain of a freshly sawn mahogany board",
     excerpt:
       "From botanical origin to export documentation, a practical overview of what makes African Mahogany one of the world's most respected hardwoods — and how to specify it with confidence.",
     difficulty: "intermediate",
@@ -140,8 +140,8 @@ export const articles: BlogArticle[] = [
       "How controlled forestry is reshaping the way architects and designers source premium hardwood for high-end projects.",
     authorId: "hurasi-desk",
     publishedDate: "2026-06-29",
-    heroImage: "/images/forests/seedling.jpg",
-    heroImageAlt: "Young mahogany seedling growing in a nursery row",
+    heroImage: "/images/blog/plantation-forest-walk.jpg",
+    heroImageAlt: "A HURASI team member standing among mature mahogany trees on the plantation",
     excerpt:
       "Luxury design and responsible sourcing are no longer competing priorities. Here is why plantation-grown African Mahogany is becoming the standard specification for architects who care about both.",
     difficulty: "beginner",

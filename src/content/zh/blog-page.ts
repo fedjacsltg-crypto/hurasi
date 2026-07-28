@@ -27,8 +27,8 @@ export const articles: BlogArticle[] = [
     subtitle: "在项目中指定使用非洲红木之前，采购商、建筑师和制造商需要了解的一切。",
     authorId: "hurasi-desk",
     publishedDate: "2026-06-15",
-    heroImage: "/images/forests/rough-sawn-slabs.jpg",
-    heroImageAlt: "新锯开的非洲红木板材，展现丰富的天然纹理",
+    heroImage: "/images/blog/board-inspection-detail.jpg",
+    heroImageAlt: "特写镜头：一只手正在查看新锯开红木板材的天然纹理",
     excerpt:
       "从植物学起源到出口文件，全面而实用地解读是什么让非洲红木成为世界上最受尊崇的硬木之一——以及如何自信地为其制定规格。",
     difficulty: "intermediate",
@@ -137,8 +137,8 @@ export const articles: BlogArticle[] = [
     subtitle: "受控林业如何重塑建筑师和设计师为高端项目采购优质硬木的方式。",
     authorId: "hurasi-desk",
     publishedDate: "2026-06-29",
-    heroImage: "/images/forests/seedling.jpg",
-    heroImageAlt: "在苗圃行列中生长的年幼红木树苗",
+    heroImage: "/images/blog/plantation-forest-walk.jpg",
+    heroImageAlt: "HURASI团队成员站在种植园内成熟的红木树之间",
     excerpt:
       "奢华设计与负责任采购不再是相互竞争的优先事项。以下是人工种植的非洲红木正成为兼顾二者的建筑师标准规格选择的原因。",
     difficulty: "beginner",

@@ -56,8 +56,11 @@
     "capabilityTitle": "Fabriqué selon vos spécifications exactes",
     "capabilityDescription": "Toute dimension, toute épaisseur, toute finition, tout motif de pose — nous fabriquons votre parquet selon vos exigences précises, et non à partir d'un catalogue figé. Notre scierie et notre atelier de finition s'adaptent à votre cahier des charges, du premier mètre carré aux programmes d'approvisionnement continu.",
     "names": {
+      "planche-fanned-1": "Planches d'acajou massif — Détail de la pile",
+      "planche-fanned-2": "Planches d'acajou massif — Détail du fil",
+      "planche-fanned-3": "Planches d'acajou massif — Pile en éventail",
+      "planche-fanned-4": "Planches d'acajou massif — Pile verticale",
       "parquet-large-lame": "Parquet massif en acajou — Large lame",
-      "parquet-chevron": "Parquet massif en acajou — Chevron",
       "parquet-batons-rompus": "Parquet massif en acajou — Bâtons rompus",
       "planche-27": "Planches sciées — 27mm",
       "planche-52": "Planches sciées — 52mm"

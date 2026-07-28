@@ -35,7 +35,7 @@ export async function ProductsSection() {
           <ProductCard product={heroProduct} featured />
         </RevealOnScroll>
 
-        {restProducts.slice(0, 4).map((product, i) => (
+        {restProducts.map((product, i) => (
           <RevealOnScroll key={product.id} delay={i * 0.08}>
             <ProductCard product={product} />
           </RevealOnScroll>

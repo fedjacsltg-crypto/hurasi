@@ -56,8 +56,11 @@
     "capabilityTitle": "Manufactured to Your Exact Specifications",
     "capabilityDescription": "Any dimension, any thickness, any finish, any laying pattern — we produce your parquet to your precise requirements, not from a fixed catalogue. Our sawmill and finishing workshop adapt to your specification, from the first square meter to continuous supply programs.",
     "names": {
+      "planche-fanned-1": "Solid Mahogany Boards — Stack Detail",
+      "planche-fanned-2": "Solid Mahogany Boards — Grain Detail",
+      "planche-fanned-3": "Solid Mahogany Boards — Fanned Stack",
+      "planche-fanned-4": "Solid Mahogany Boards — Vertical Stack",
       "parquet-large-lame": "Solid Mahogany Parquet — Wide Plank",
-      "parquet-chevron": "Solid Mahogany Parquet — Chevron",
       "parquet-batons-rompus": "Solid Mahogany Parquet — Herringbone",
       "planche-27": "Sawn Boards — 27mm",
       "planche-52": "Sawn Boards — 52mm"

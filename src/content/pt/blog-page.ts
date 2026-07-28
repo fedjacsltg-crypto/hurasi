@@ -29,8 +29,8 @@ export const articles: BlogArticle[] = [
       "O que compradores, arquitetos e fabricantes precisam entender antes de especificar Mogno Africano para um projeto.",
     authorId: "hurasi-desk",
     publishedDate: "2026-06-15",
-    heroImage: "/images/forests/rough-sawn-slabs.jpg",
-    heroImageAlt: "Pranchões de Mogno Africano recém-serrados mostrando veios naturais ricos",
+    heroImage: "/images/blog/board-inspection-detail.jpg",
+    heroImageAlt: "Close-up de uma mão inspecionando os veios naturais de uma prancha de mogno recém-serrada",
     excerpt:
       "Da origem botânica à documentação de exportação, uma visão prática do que torna o Mogno Africano uma das madeiras nobres mais respeitadas do mundo — e como especificá-lo com confiança.",
     difficulty: "intermediate",
@@ -140,8 +140,8 @@ export const articles: BlogArticle[] = [
       "Como a silvicultura controlada está remodelando a forma como arquitetos e designers adquirem madeira nobre premium para projetos de alto padrão.",
     authorId: "hurasi-desk",
     publishedDate: "2026-06-29",
-    heroImage: "/images/forests/seedling.jpg",
-    heroImageAlt: "Muda jovem de mogno crescendo em fileira de viveiro",
+    heroImage: "/images/blog/plantation-forest-walk.jpg",
+    heroImageAlt: "Uma colaboradora da HURASI entre mognos maduros na plantação",
     excerpt:
       "Design de luxo e abastecimento responsável já não são prioridades concorrentes. Veja por que o Mogno Africano de plantio está se tornando a especificação padrão para arquitetos que se importam com ambos.",
     difficulty: "beginner",
