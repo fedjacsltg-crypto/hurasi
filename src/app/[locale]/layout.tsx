@@ -51,6 +51,13 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: "hero" });
 
   return {
+    // Sans ceci, Next.js ne sait pas comment construire les URLs absolues
+    // requises par Open Graph/Twitter Cards (image, canonical...) et se
+    // rabat silencieusement sur http://localhost:3000 — ce qui rend
+    // l'image Open Graph invisible pour tout outil de prévisualisation
+    // externe (WhatsApp, Slack, opengraph.xyz...) une fois le site en
+    // ligne (28/07/2026).
+    metadataBase: new URL("https://hurasi.com.br"),
     title: {
       default: `HURASI — ${t("tagline")}`,
       template: "%s — HURASI",
