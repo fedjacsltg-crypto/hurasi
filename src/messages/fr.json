@@ -91,7 +91,8 @@
     "commonDimensions": "Dimensions courantes",
     "durability": "Durabilité",
     "moistureResistance": "Résistance à l'humidité",
-    "requestQuoteForApplication": "Demander un devis pour cette application →"
+    "requestQuoteForApplication": "Demander un devis pour cette application →",
+    "loadMore": "Charger plus"
   },
   "quoteForm": {
     "sectionCustomerInfo": "Informations client",

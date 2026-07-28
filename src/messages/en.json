@@ -91,7 +91,8 @@
     "commonDimensions": "Common Dimensions",
     "durability": "Durability",
     "moistureResistance": "Moisture Resistance",
-    "requestQuoteForApplication": "Request a Quotation for This Application →"
+    "requestQuoteForApplication": "Request a Quotation for This Application →",
+    "loadMore": "Load More"
   },
   "quoteForm": {
     "sectionCustomerInfo": "Customer Information",

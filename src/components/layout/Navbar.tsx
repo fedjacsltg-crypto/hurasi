@@ -169,8 +169,8 @@ export function Navbar() {
                 ))}
               </ul>
 
-              <div className="mt-8 flex items-center justify-between">
-                <LanguageSwitcher />
+              <div className="mt-8">
+                <LanguageSwitcher variant="inline" />
               </div>
 
               <Button

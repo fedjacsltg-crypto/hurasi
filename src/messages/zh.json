@@ -91,7 +91,8 @@
     "commonDimensions": "常见尺寸",
     "durability": "耐用性",
     "moistureResistance": "防潮性能",
-    "requestQuoteForApplication": "为此应用索取报价 →"
+    "requestQuoteForApplication": "为此应用索取报价 →",
+    "loadMore": "加载更多"
   },
   "quoteForm": {
     "sectionCustomerInfo": "客户信息",

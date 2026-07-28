@@ -91,7 +91,8 @@
     "commonDimensions": "Типовые размеры",
     "durability": "Долговечность",
     "moistureResistance": "Влагостойкость",
-    "requestQuoteForApplication": "Запросить предложение для этого применения →"
+    "requestQuoteForApplication": "Запросить предложение для этого применения →",
+    "loadMore": "Показать ещё"
   },
   "quoteForm": {
     "sectionCustomerInfo": "Информация о клиенте",

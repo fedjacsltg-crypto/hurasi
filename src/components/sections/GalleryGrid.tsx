@@ -13,16 +13,28 @@ interface GalleryGridProps {
   items: GalleryItem[];
 }
 
+const PAGE_SIZE = 12;
+
 export function GalleryGrid({ items }: GalleryGridProps) {
   const t = useTranslations("gallery");
   const tCategories = useTranslations("galleryCategories");
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
   const filtered = useMemo(
     () => (activeCategory ? items.filter((i) => i.category === activeCategory) : items),
     [items, activeCategory]
   );
+
+  // Charge seulement un lot de photos à la fois — 56 photos téléchargées
+  // simultanément rendaient la page inutilisable sur mobile (28/07/2026).
+  const visibleItems = filtered.slice(0, visibleCount);
+
+  function selectCategory(cat: string | null) {
+    setActiveCategory(cat);
+    setVisibleCount(PAGE_SIZE);
+  }
 
   // Ne montre que les catégories qui ont réellement au moins une photo —
   // évite un filtre qui mène systématiquement à une grille vide tant que
@@ -56,7 +68,7 @@ export function GalleryGrid({ items }: GalleryGridProps) {
       {/* Filtres — pas de rechargement de page, transition instantanée */}
       <div className="flex flex-wrap gap-2">
         <button
-          onClick={() => setActiveCategory(null)}
+          onClick={() => selectCategory(null)}
           className={cn(
             "border px-4 py-2 text-caption uppercase tracking-[0.08em] transition-colors",
             activeCategory === null
@@ -69,7 +81,7 @@ export function GalleryGrid({ items }: GalleryGridProps) {
         {availableCategories.map((cat) => (
           <button
             key={cat.id}
-            onClick={() => setActiveCategory(cat.id)}
+            onClick={() => selectCategory(cat.id)}
             className={cn(
               "border px-4 py-2 text-caption uppercase tracking-[0.08em] transition-colors",
               activeCategory === cat.id
@@ -84,7 +96,7 @@ export function GalleryGrid({ items }: GalleryGridProps) {
 
       {/* Grille en mosaïque — colonnes CSS pour un rendu éditorial varié */}
       <div className="mt-11 columns-1 gap-5 sm:columns-2 lg:columns-3">
-        {filtered.map((item, i) => (
+        {visibleItems.map((item, i) => (
           <button
             key={item.id}
             onClick={() => openAt(i)}
@@ -96,6 +108,7 @@ export function GalleryGrid({ items }: GalleryGridProps) {
                 alt={item.alt}
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                loading={i < 4 ? "eager" : "lazy"}
                 className="object-cover transition-transform duration-700 [transition-timing-function:var(--ease-signature)] group-hover:scale-[1.04]"
               />
               <div
@@ -109,6 +122,17 @@ export function GalleryGrid({ items }: GalleryGridProps) {
           </button>
         ))}
       </div>
+
+      {visibleCount < filtered.length && (
+        <div className="mt-11 text-center">
+          <button
+            onClick={() => setVisibleCount((c) => c + PAGE_SIZE)}
+            className="border border-border px-9 py-4 text-caption uppercase tracking-[0.1em] text-fg/70 hover:border-fg/40 hover:text-fg transition-colors"
+          >
+            {t("loadMore")}
+          </button>
+        </div>
+      )}
 
       {/* Visionneuse plein écran */}
       <AnimatePresence>

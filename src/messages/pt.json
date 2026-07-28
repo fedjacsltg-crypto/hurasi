@@ -91,7 +91,8 @@
     "commonDimensions": "Dimensões Comuns",
     "durability": "Durabilidade",
     "moistureResistance": "Resistência à Umidade",
-    "requestQuoteForApplication": "Solicitar Orçamento para Esta Aplicação →"
+    "requestQuoteForApplication": "Solicitar Orçamento para Esta Aplicação →",
+    "loadMore": "Carregar Mais"
   },
   "quoteForm": {
     "sectionCustomerInfo": "Informações do Cliente",
