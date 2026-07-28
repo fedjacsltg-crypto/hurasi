@@ -67,12 +67,12 @@ export function Navbar() {
           <Image
             src="/brand/monogram-hurasi.png"
             alt="HURASI"
-            width={40}
-            height={37}
-            className="h-9 w-auto"
+            width={52}
+            height={48}
+            className="h-11 w-auto sm:h-12"
             priority
           />
-          <span className="font-display text-heading-m tracking-wide">
+          <span className="font-display text-heading-m tracking-wide text-accent">
             HURASI
           </span>
         </Link>

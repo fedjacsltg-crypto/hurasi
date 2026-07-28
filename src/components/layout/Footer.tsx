@@ -15,9 +15,9 @@ export async function Footer() {
           <Image
             src="/brand/logo-hurasi.png"
             alt="HURASI"
-            width={140}
-            height={140}
-            className="h-auto w-24"
+            width={280}
+            height={280}
+            className="h-auto w-48"
           />
           <p className="mt-4 text-body-s text-pearl/60">
             {tFooter("tagline")}
@@ -45,6 +45,8 @@ export async function Footer() {
             <li><Link href="/products" className="hover:text-pearl transition-colors">{t("products")}</Link></li>
             <li><Link href="/sustainability" className="hover:text-pearl transition-colors">{t("sustainability")}</Link></li>
             <li><Link href="/gallery" className="hover:text-pearl transition-colors">{t("gallery")}</Link></li>
+            <li><Link href="/blog" className="hover:text-pearl transition-colors">{t("blog")}</Link></li>
+            <li><Link href="/faq" className="hover:text-pearl transition-colors">{t("faq")}</Link></li>
             <li><Link href="/contact" className="hover:text-pearl transition-colors">{t("contact")}</Link></li>
           </ul>
         </nav>
