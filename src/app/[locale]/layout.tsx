@@ -63,6 +63,10 @@ export async function generateMetadata({
       template: "%s — HURASI",
     },
     description: t("subtitle"),
+    openGraph: {
+      type: "website",
+      siteName: "HURASI",
+    },
   };
 }
 
